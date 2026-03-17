@@ -4,11 +4,28 @@
 let DB = { sentences: [], words: {}, scenes: {} };
 let currentCardIndex = 0;
 let currentCategoryIds = [];
-let quizCount = 0; // 광고 카운터
+
+// 🔥 광고용 카운터 변수 추가
+let quizCount = 0; 
+
+/**
+ * [0. 광고 호출 유틸리티 추가]
+ */
+async function loadBannerAd() {
+    if (window.toss && typeof toss.showAd === 'function') {
+        try { await toss.showAd({ adUnitId: '', type: 'BANNER', containerId: 'toss-ad-banner' }); } catch (e) {}
+    }
+}
+async function showInterstitialAd() {
+    if (window.toss && typeof toss.showAd === 'function') {
+        try { await toss.showAd({ adUnitId: '', type: 'INTERSTITIAL' }); } catch (e) {}
+    }
+}
 
 /**
  * [1. 핵심 유틸리티]
  */
+
 function saveWrongNote(id) {
     if (!id) return;
     let wrongList = JSON.parse(localStorage.getItem('wrong_notes') || '[]');
@@ -16,6 +33,12 @@ function saveWrongNote(id) {
         wrongList.push(id);
         localStorage.setItem('wrong_notes', JSON.stringify(wrongList));
     }
+}
+
+function removeWrongNote(id) {
+    let wrongList = JSON.parse(localStorage.getItem('wrong_notes') || '[]');
+    localStorage.setItem('wrong_notes', JSON.stringify(wrongList.filter(i => i !== id)));
+    renderWrongNotes(); 
 }
 
 function speak(text) {
@@ -28,51 +51,27 @@ function speak(text) {
 
 function celebrate() {
     if (typeof confetti === 'function') {
-        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#8845C3', '#FF8CC3', '#4CAF50'] });
+        // 로고 색상(파랑, 노랑, 초록)에 맞게 폭죽 색상 변경
+        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#6B9BE8', '#FFD13B', '#81C784'] });
     }
 }
 
 /**
- * [2. 광고 로직]
+ * [2. 데이터 로드 및 초기화]
  */
-async function loadBannerAd() {
-    if (window.toss && typeof toss.showAd === 'function') {
-        try {
-            await toss.showAd({
-                adUnitId: '', // 실제 ID로 교체
-                type: 'BANNER',
-                containerId: 'toss-ad-banner'
-            });
-        } catch (e) { console.error("배너 로드 실패", e); }
-    }
-}
 
-async function showInterstitialAd() {
-    quizCount++;
-    if (quizCount % 5 === 0) { // 5문제마다
-        if (window.toss && typeof toss.showAd === 'function') {
-            try {
-                await toss.showAd({
-                    adUnitId: '', // 실제 ID로 교체
-                    type: 'INTERSTITIAL'
-                });
-            } catch (e) { console.error("전면 광고 실패", e); }
-        }
-    }
-}
-
-/**
- * [3. 데이터 로드 및 내비게이션]
- */
 async function loadData() {
     const loadingContent = document.getElementById('loading-content');
     const errorContent = document.getElementById('error-content');
+
     try {
         const [sRes, wRes] = await Promise.all([
             fetch('./japanese_sentences.json'),
             fetch('./basic_words.json')
         ]);
-        if (!sRes.ok || !wRes.ok) throw new Error('Network error');
+
+        if (!sRes.ok || !wRes.ok) throw new Error('Network response was not ok');
+
         const sData = await sRes.json();
         const wData = await wRes.json();
 
@@ -84,172 +83,316 @@ async function loadData() {
             numbers: wData.numbers.number.flat(),
             days: wData.numbers.day.flat()
         };
+        
         renderCategories();
         document.getElementById('loading-overlay').style.display = 'none';
+
+        // 🔥 성공 시 하단 배너 로드 추가
+        loadBannerAd();
+
     } catch (e) {
+        console.error("Load Error:", e);
         if (loadingContent) loadingContent.style.display = 'none';
         if (errorContent) errorContent.style.display = 'block';
     }
 }
 
-function changeView(viewId, el, pushState = true) {
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-    document.getElementById(`view-${viewId}`).classList.add('active');
-    
-    document.querySelectorAll('.nav-item').forEach(v => v.classList.remove('active'));
-    if (el) el.classList.add('active');
+async function initTossBridge() {
+    if (typeof window.toss !== 'undefined') {
+        try {
+            await toss.setNavigationBarColor({
+                color: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#101418' : '#F0F5FC', // 로고 배경색 반영
+                buttonColor: '#6B9BE8'
+            });
+            const user = await toss.getUserInfo();
+            if (user && user.name) {
+                const greeting = document.getElementById('user-greeting');
+                if (greeting) greeting.innerText = `${user.name} 님의 일본어 퀴즈 ✨`;
+            }
+        } catch (e) { console.warn("Toss SDK Inactive"); }
+    }
+}
 
-    if (viewId === 'wrong') updateJourney();
-    if (pushState) history.pushState({ view: viewId }, '', '');
+/**
+ * [3. 내비게이션 관리]
+ */
+
+function changeView(viewId, navEl, pushHistory = true) {
+    if (pushHistory) history.pushState({ view: viewId }, '', '');
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    const target = document.getElementById(`view-${viewId}`);
+    if (target) target.classList.add('active');
+    
+    if (navEl) {
+        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+        navEl.classList.add('active');
+    }
+
+    if (viewId === 'random') nextRandomQuiz();
+    if (viewId === 'wrong') renderWrongNotes();
+    if (viewId === 'my') updateJourney();
+    if (viewId === 'home') renderCategories();
+    if (viewId === 'words') changeWordTab('hiragana', document.querySelector('#word-tabs .tab'));
 }
 
 window.onpopstate = (e) => {
     if (!e.state || e.state.view === 'home') {
-        if (window.toss && typeof toss.closeWebView === 'function') toss.closeWebView();
-        else changeView('home', document.querySelector('.nav-item'), false);
+        if (window.toss && typeof toss.closeWebView === 'function') {
+            toss.closeWebView();
+        } else {
+            changeView('home', null, false);
+        }
     } else {
-        changeView(e.state.view, null, false);
+        const view = e.state.view;
+        changeView(view, null, false);
     }
 };
 
-/**
- * [4. 퀴즈 엔진]
- */
-function startCategoryQuiz(catName, specificId = null) {
-    currentCategoryIds = DB.scenes[catName] || [];
-    currentCardIndex = specificId ? currentCategoryIds.indexOf(specificId) : 0;
-    if (currentCardIndex === -1) currentCardIndex = 0;
-    
-    document.getElementById('list-title').innerText = catName;
-    changeView('list');
-    renderQuiz();
-}
-
-function startRandomQuiz() {
-    currentCategoryIds = DB.sentences.map(s => s.id).sort(() => Math.random() - 0.5);
-    currentCardIndex = 0;
-    document.getElementById('list-title').innerText = "무한 랜덤 ⚡️";
-    changeView('list');
-    renderQuiz();
-}
-
-function renderQuiz() {
-    const container = document.getElementById('card-container');
-    if (currentCardIndex >= currentCategoryIds.length) {
-        celebrate();
-        container.innerHTML = `
-            <div class="quiz-card">
-                <h2 style="color:var(--primary)">모두 완료! 🎉</h2>
-                <p>이 카테고리의 모든 문장을 마스터했습니다.</p>
-                <button class="choice-btn" onclick="changeView('home')" style="margin-top:20px; background:var(--primary); color:white; border:none;">다른 카테고리 보기</button>
-            </div>`;
-        return;
-    }
-
-    const item = DB.sentences.find(s => s.id === currentCategoryIds[currentCardIndex]);
-    const others = DB.sentences.filter(s => s.id !== item.id).sort(() => Math.random() - 0.5).slice(0, 2);
-    const choices = [item, ...others].sort(() => Math.random() - 0.5);
-
-    container.innerHTML = `
-        <div class="quiz-card" onclick="speak('${item.phrase}')">
-            <div class="phrase">${item.phrase}</div>
-            <div class="meaning">${item.korean}</div>
-            <div style="font-size:12px; color:var(--text-sub)">🔈 터치하여 발음 듣기</div>
-        </div>
-        <div class="choice-container">
-            ${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, ${c.id === item.id}, '${item.id}')">${c.meaning}</button>`).join('')}
-        </div>
-    `;
-}
-
-async function checkAnswer(btn, isCorrect, id) {
-    const btns = document.querySelectorAll('.choice-btn');
-    btns.forEach(b => b.disabled = true);
-
-    if (isCorrect) {
-        btn.classList.add('correct');
-        localStorage.setItem(`mission_${id}`, 'true');
-        if (window.toss && typeof toss.vibrate === 'function') toss.vibrate('success');
-        
-        // 정답 시 광고 카운트 체크
-        await showInterstitialAd();
-
-        setTimeout(() => {
-            currentCardIndex++;
-            renderQuiz();
-        }, 1200);
-    } else {
-        btn.classList.add('error');
-        saveWrongNote(id);
-        if (window.toss && typeof toss.vibrate === 'function') toss.vibrate('error');
-        setTimeout(() => {
-            btns.forEach(b => { b.classList.remove('error'); b.disabled = false; });
-        }, 1000);
-    }
-}
+function handleBack() { window.history.back(); }
 
 /**
- * [5. UI 렌더링]
+ * [4. 기초 문장 퀴즈]
  */
+
 function renderCategories() {
     const list = document.getElementById('category-list');
-    list.innerHTML = Object.keys(DB.scenes).map(cat => `
-        <div class="card" onclick="startCategoryQuiz('${cat}')">
-            <div style="font-size:24px; margin-right:15px;">📍</div>
-            <div>
-                <div style="font-weight:800; font-size:17px;">${cat}</div>
-                <div style="font-size:13px; color:var(--text-sub); margin-top:2px;">${DB.scenes[cat].length}개 문장 학습하기</div>
-            </div>
-        </div>
-    `).join('');
-
-    const wordList = document.getElementById('word-category-list');
-    const wordCats = [
-        { name: '히라가나', icon: 'あ', data: 'hiragana' },
-        { name: '가타카나', icon: 'ア', data: 'katakana' },
-        { name: '숫자/단위', icon: '1️⃣', data: 'numbers' },
-        { name: '날짜/요일', icon: '📅', data: 'days' }
-    ];
-    wordList.innerHTML = wordCats.map(cat => `
-        <div class="card" onclick="alert('단어 퀴즈 모드는 준비 중입니다! 문장 학습을 먼저 이용해주세요.')">
-            <div style="font-size:24px; margin-right:15px;">${cat.icon}</div>
-            <div>
-                <div style="font-weight:800; font-size:17px;">${cat.name}</div>
-                <div style="font-size:13px; color:var(--text-sub); margin-top:2px;">기초 필수 암기</div>
-            </div>
-        </div>
-    `).join('');
-}
-
-function updateJourney() {
-    const doneTotal = DB.sentences.filter(s => localStorage.getItem(`mission_${s.id}`)).length;
-    const percent = Math.round((doneTotal / DB.sentences.length) * 100) || 0;
-    document.getElementById('total-percent').innerText = `${percent}% 정복`;
-    document.getElementById('total-bar').style.width = `${percent}%`;
-    document.getElementById('total-count').innerText = `전체 ${doneTotal} / ${DB.sentences.length} 문장 완료`;
-    
-    const journeyList = document.getElementById('journey-category-list');
-    journeyList.innerHTML = Object.keys(DB.scenes).map(cat => {
-        const ids = DB.scenes[cat];
-        const done = ids.filter(id => localStorage.getItem(`mission_${id}`)).length;
-        const p = Math.round((done / ids.length) * 100) || 0;
+    if (!list) return;
+    list.innerHTML = Object.keys(DB.scenes).map(cat => {
+        const total = DB.scenes[cat].length;
+        const done = DB.scenes[cat].filter(id => localStorage.getItem(`mission_${id}`)).length;
         return `
-            <div class="card" style="flex-direction:column; align-items:flex-start; cursor:default;">
-                <div style="display:flex; justify-content:space-between; width:100%; font-weight:800; margin-bottom:8px;">
-                    <span>${cat}</span><span>${p}%</span>
+            <div class="card" onclick="startCategoryQuiz('${cat}')">
+                <div>
+                    <div style="font-weight:800; font-size:18px;">${cat}</div>
+                    <div style="font-size:12px; color:var(--primary); margin-top:4px;">${done} / ${total} 완료</div>
                 </div>
-                <div class="chart-bar-bg" style="width:100%;"><div class="chart-bar-fill" style="width:${p}%"></div></div>
+                <div style="color:#CCC; font-weight:bold;">＞</div>
             </div>`;
     }).join('');
 }
 
-function handleBack() {
-    history.back();
+function startCategoryQuiz(cat, targetId = null) {
+    changeView('list');
+    document.getElementById('list-title').innerText = cat;
+    currentCategoryIds = DB.scenes[cat];
+    
+    if (targetId) {
+        const targetIdx = currentCategoryIds.indexOf(targetId);
+        currentCardIndex = (targetIdx !== -1) ? targetIdx : 0;
+    } else {
+        const unsolvedIdx = currentCategoryIds.findIndex(id => !localStorage.getItem(`mission_${id}`));
+        currentCardIndex = (unsolvedIdx === -1) ? currentCategoryIds.length : unsolvedIdx;
+    }
+    
+    showNextCard();
 }
 
+function showNextCard() {
+    const container = document.getElementById('card-container');
+    if (currentCardIndex >= currentCategoryIds.length) {
+        container.innerHTML = `<div class="quiz-card"><h2>🎉 모두 완료했습니다!</h2><button class="choice-btn btn-primary" onclick="handleBack()">목록으로 돌아가기</button></div>`;
+        return;
+    }
+    const id = currentCategoryIds[currentCardIndex];
+    const item = DB.sentences.find(s => s.id === id);
+    container.innerHTML = `
+        <div class="quiz-card">
+            <div class="jp-text-xl" onclick="speak('${item.phrase}')">${item.phrase}</div>
+            <div id="meaning-box" class="meaning-blur">${item.meaning}</div>
+            <div id="quiz-options">
+                <button class="choice-btn btn-primary" onclick="revealQuiz('${id}')">퀴즈 풀기 시작</button>
+            </div>
+            <div id="quiz-feedback" style="margin-top:15px; font-weight:bold; min-height:22px;"></div>
+        </div>`;
+    speak(item.phrase);
+}
+
+function revealQuiz(id) {
+    const item = DB.sentences.find(s => s.id === id);
+    document.getElementById('meaning-box').classList.add('blurred');
+    const others = DB.sentences.filter(s => s.id !== id).sort(() => 0.5 - Math.random()).slice(0, 2).map(s => s.meaning);
+    const choices = [item.meaning, ...others].sort(() => 0.5 - Math.random());
+    document.getElementById('quiz-options').innerHTML = choices.map(c => `
+        <button class="choice-btn" onclick="checkCardAnswer('${id}', '${c}', '${item.meaning}')">${c}</button>
+    `).join('');
+}
+
+function checkCardAnswer(id, selected, correct) {
+    const fb = document.getElementById('quiz-feedback');
+    if (selected === correct) {
+        fb.innerHTML = `<span style="color:var(--success)">정답! 🎉</span>`;
+        celebrate();
+        if (window.toss && toss.vibrate) toss.vibrate('success');
+        localStorage.setItem(`mission_${id}`, 'true');
+
+        // 🔥 정답 시 광고 카운트 증가 및 5배수 체크
+        quizCount++;
+        if (quizCount % 5 === 0) showInterstitialAd();
+
+        setTimeout(() => { currentCardIndex++; showNextCard(); }, 800);
+    } else {
+        fb.innerHTML = `<span style="color:var(--error)">오답 😢</span>`;
+        if (window.toss && toss.vibrate) toss.vibrate('error');
+        saveWrongNote(id); 
+    }
+}
+
+/**
+ * [5. 기초 단어 & 단어 퀴즈]
+ */
+
+function changeWordTab(type, el) {
+    if (el) {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+    }
+    const container = document.getElementById('word-content-container');
+    const tip = document.getElementById('word-tip');
+    
+    if (type === 'quiz') { 
+        if (tip) tip.style.display = 'none';
+        renderWordQuiz(); 
+        return; 
+    }
+    
+    if (tip) tip.style.display = 'block';
+    if (type === 'hiragana' || type === 'katakana') {
+        let html = `<table class="kana-table">`;
+        DB.words[type].forEach(row => {
+            html += `<tr>${row.map(c => c.kana ? `<td onclick="speak('${c.kana}')"><b style="color:var(--primary); font-size:24px; display:block;">${c.kana}</b><small style="color:#ABB5BD; font-weight:700;">${c.kr}</small></td>` : '<td></td>').join('')}</tr>`;
+        });
+        container.innerHTML = html + `</table>`;
+    } else {
+        container.innerHTML = `<div class="word-grid">` + DB.words[type].filter(w => w.kana).map(w => `
+            <div class="word-card" onclick="speak('${w.kana}')">
+                <b style="color:var(--primary); font-size:28px;">${w.kana}</b>
+                <span style="font-weight:800; font-size:16px; margin-top:4px;">${w.meaning}</span>
+                <small style="color:#adb5bd;">${w.kr || w.roma}</small>
+            </div>`).join('') + `</div>`;
+    }
+}
+
+function renderWordQuiz() {
+    const container = document.getElementById('word-content-container');
+    const allWords = [...DB.words.numbers, ...DB.words.days].filter(w => w.kana && w.meaning);
+    const item = allWords[Math.floor(Math.random() * allWords.length)];
+    const others = allWords.filter(w => w.kana !== item.kana).sort(() => 0.5 - Math.random()).slice(0, 2).map(o => o.meaning);
+    const choices = [item.meaning, ...others].sort(() => 0.5 - Math.random());
+    
+    container.innerHTML = `<div class="quiz-card" style="box-shadow:none;">
+        <div class="jp-text-xl">${item.kana}</div>
+        <div>${choices.map(c => `<button class="choice-btn" onclick="checkWordQuizAnswer('${c}', '${item.meaning}')">${c}</button>`).join('')}</div>
+        <div id="word-quiz-feedback" style="margin-top:15px; font-weight:bold; min-height:22px;"></div>
+    </div>`;
+    speak(item.kana);
+}
+
+function checkWordQuizAnswer(selected, correct) {
+    const fb = document.getElementById('word-quiz-feedback');
+    if (selected === correct) {
+        fb.innerHTML = `<span style="color:var(--success)">정답!</span>`; celebrate();
+
+        // 🔥 단어 퀴즈 정답 시 광고 카운트 증가
+        quizCount++;
+        if (quizCount % 5 === 0) showInterstitialAd();
+
+        setTimeout(renderWordQuiz, 800);
+    } else fb.innerHTML = `<span style="color:var(--error)">오답</span>`;
+}
+
+/**
+ * [6. 무한 랜덤 퀴즈]
+ */
+
+function nextRandomQuiz() {
+    const item = DB.sentences[Math.floor(Math.random() * DB.sentences.length)];
+    const modes = ['jpKo', 'koJp', 'audioKo', 'audioJp'];
+    const mode = modes[Math.floor(Math.random() * modes.length)];
+    const others = DB.sentences.filter(s => s.id !== item.id).sort(() => 0.5 - Math.random()).slice(0, 2);
+    let q = "", sub = "", ansText = "", choices = [];
+
+    switch(mode) {
+        case 'jpKo': q = `<span class="jp-text-xl">${item.phrase}</span>`; sub = "뜻을 고르세요"; ansText = item.meaning; choices = [item.meaning, others[0].meaning, others[1].meaning]; break;
+        case 'koJp': q = `<span style="font-size:24px; font-weight:800;">${item.meaning}</span>`; sub = "일본어 문장은?"; ansText = item.phrase; choices = [item.phrase, others[0].phrase, others[1].phrase]; break;
+        case 'audioKo': q = "🔈 재생 중"; sub = "들리는 뜻은?"; ansText = item.meaning; choices = [item.meaning, others[0].meaning, others[1].meaning]; speak(item.phrase); break;
+        case 'audioJp': q = "🔈 재생 중"; sub = "들리는 문장은?"; ansText = item.phrase; choices = [item.phrase, others[0].phrase, others[1].phrase]; speak(item.phrase); break;
+    }
+
+    const area = document.getElementById('random-quiz-area');
+    if (area) {
+        area.innerHTML = `
+            <div style="min-height:100px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                ${q}<div style="margin-top:10px; color:#8B95A1; font-weight:700;">${sub}</div>
+            </div>
+            <div>${choices.sort(() => 0.5 - Math.random()).map(c => `<button class="choice-btn" onclick="checkRandomAnswer('${item.id}', '${c}', '${ansText}')">${c}</button>`).join('')}</div>
+            <div id="random-feedback" style="margin-top:15px; font-weight:bold; min-height:22px;"></div>`;
+    }
+}
+
+function checkRandomAnswer(id, selected, correct) {
+    const fb = document.getElementById('random-feedback');
+    if (selected === correct) {
+        fb.innerHTML = `<span style="color:var(--success)">정답! 🎉</span>`; celebrate();
+
+        // 🔥 랜덤 퀴즈 정답 시 광고 카운트 증가
+        quizCount++;
+        if (quizCount % 5 === 0) showInterstitialAd();
+
+        setTimeout(nextRandomQuiz, 800);
+    } else {
+        fb.innerHTML = `<span style="color:var(--error)">오답 😢</span>`;
+        saveWrongNote(id); 
+    }
+}
+
+/**
+ * [7. 오답 노트 & 여정]
+ */
+
+function renderWrongNotes() {
+    const container = document.getElementById('wrong-note-list');
+    const wrongIds = JSON.parse(localStorage.getItem('wrong_notes') || '[]');
+    if (wrongIds.length === 0) {
+        container.innerHTML = `<div class="card" style="justify-content:center; color:#CCC;">오답이 없습니다.</div>`;
+        return;
+    }
+    container.innerHTML = wrongIds.map(id => {
+        const item = DB.sentences.find(s => s.id === id);
+        if (!item) return '';
+        return `
+            <div class="card" style="flex-direction:column; align-items:flex-start;" onclick="speak('${item.phrase}')">
+                <b style="color:var(--primary); font-size:24px; display:block;">${item.phrase}</b>
+                <span style="font-weight:800; font-size:16px;">${item.meaning}</span>
+                <div style="display:flex; gap:10px; width:100%; margin-top:10px;">
+                    <button class="choice-btn" style="padding:8px; font-size:12px; margin:0; flex:1;" onclick="event.stopPropagation(); removeWrongNote('${id}')">삭제</button>
+                    <button class="choice-btn btn-primary" style="padding:8px; font-size:12px; margin:0; flex:1;" onclick="event.stopPropagation(); startCategoryQuiz('${item.scene}', '${id}')">학습하러 가기</button>
+                </div>
+            </div>`;
+    }).join('');
+}
+
+function updateJourney() {
+    const doneTotal = DB.sentences.filter(s => localStorage.getItem(`mission_${s.id}`)).length;
+    const percent = Math.round((doneTotal / DB.sentences.length) * 100);
+    document.getElementById('total-percent').innerText = `${percent}% 정복`;
+    document.getElementById('total-bar').style.width = `${percent}%`;
+    document.getElementById('total-count').innerText = `전체 ${doneTotal} / ${DB.sentences.length} 문장 완료`;
+    document.getElementById('journey-category-list').innerHTML = Object.keys(DB.scenes).map(cat => {
+        const ids = DB.scenes[cat];
+        const done = ids.filter(id => localStorage.getItem(`mission_${id}`)).length;
+        const p = Math.round((done / ids.length) * 100);
+        return `<div class="card" style="flex-direction:column; align-items:flex-start; cursor:default;">
+            <div style="display:flex; justify-content:space-between; width:100%; font-weight:800; font-size:15px; margin-bottom:4px;">
+                <span>${cat}</span><span>${p}%</span>
+            </div>
+            <div class="chart-bar-bg" style="width:100%;"><div class="chart-bar-fill" style="width:${p}%"></div></div>
+        </div>`;
+    }).join('');
+}
+
+// [시작]
 window.onload = () => {
     history.replaceState({ view: 'home' }, '', ''); 
     loadData();
-    if (window.toss && typeof toss.init === 'function') toss.init();
-    loadBannerAd(); // 배너 로드
+    initTossBridge();
 };

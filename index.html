@@ -6,87 +6,102 @@
     <title>기초일본어 퀴즈</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        /* 1. 폰트 및 테마 설정 */
+        /* 1. 폰트 및 테마 설정 (로고 디자인 반영) */
         @font-face {
             font-family: 'CustomFont';
             src: url('./font2.ttf') format('truetype');
         }
 
         :root { 
-            --primary: #8845C3; --bg: #F2F4F6; --white: #FFFFFF; 
-            --text-main: #191F28; --text-sub: #4E5968; --success: #4CAF50; --error: #F44336; 
+            --primary: #6B9BE8; /* 로고의 메인 파란색으로 변경 */
+            --bg: #F0F5FC;      /* 로고 배경과 어울리는 아주 연한 하늘색 배경 */
+            --white: #FFFFFF; 
+            --text-main: #2C3E50; /* 조금 더 부드러운 다크블루 텍스트 */
+            --text-sub: #7A8B9E; 
+            --success: #4CAF50; 
+            --error: #F44336; 
         }
 
         @media (prefers-color-scheme: dark) {
-            :root { --bg: #101012; --white: #1C1C1E; --text-main: #F2F4F6; --text-sub: #8B95A1; }
+            :root { --bg: #101418; --white: #1C242C; --text-main: #F0F5FC; --text-sub: #8B9AAB; }
         }
 
         body { 
             margin: 0; font-family: 'CustomFont', -apple-system, sans-serif; 
-            background-color: var(--bg); color: var(--text-main); padding-bottom: 120px; 
-            -webkit-tap-highlight-color: transparent; user-select: none;
+            background-color: var(--bg); color: var(--text-main); 
+            padding-bottom: 140px; /* 배너 광고 공간 확보를 위해 패딩 증가 */
         }
 
-        /* 2. 레이아웃 및 공통 컴포넌트 */
-        .container { padding: 20px; max-width: 600px; margin: 0 auto; }
-        .view { display: none; animation: fadeIn 0.3s ease; }
+        .container { padding: 20px; max-width: 500px; margin: 0 auto; }
+        .view { display: none; }
         .view.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .card { 
-            background: var(--white); border-radius: 24px; padding: 20px; margin-bottom: 16px; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; align-items: center; cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-        .card:active { transform: scale(0.98); }
-
-        /* 퀴즈 카드 스타일 */
-        .quiz-card { 
-            background: var(--white); border-radius: 32px; padding: 40px 20px; text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 30px; min-height: 200px;
-            display: flex; flex-direction: column; justify-content: center;
-        }
-        .phrase { font-size: 32px; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
-        .meaning { font-size: 18px; color: var(--text-sub); margin-bottom: 8px; }
-
-        .choice-container { display: grid; gap: 12px; }
-        .choice-btn { 
-            background: var(--white); border: 2px solid #EEE; border-radius: 18px; padding: 18px;
-            font-size: 17px; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text-main);
-            font-family: 'CustomFont';
-        }
-        .choice-btn.correct { background: var(--success); color: white; border-color: var(--success); }
-        .choice-btn.error { background: var(--error); color: white; border-color: var(--error); }
+        header { margin-bottom: 24px; }
+        .sub-brand { font-size: 14px; color: var(--primary); font-weight: 700; margin-bottom: 4px; display: block; }
 
         /* 로딩 스피너 */
         #loading-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--bg); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999;
+            background: var(--bg); display: flex; align-items: center; justify-content: center; z-index: 9999;
         }
-        .spinner { width: 40px; height: 40px; border: 4px solid rgba(136, 69, 195, 0.2); border-top: 4px solid var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        .spinner { width: 32px; height: 32px; border: 3px solid var(--white); border-top: 3px solid var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* 내비게이션 */
-        .bottom-nav { 
-            position: fixed; bottom: 0; left: 0; width: 100%; height: 70px; 
-            background: var(--white); display: flex; justify-content: space-around; align-items: center;
-            border-top: 1px solid rgba(0,0,0,0.05); z-index: 1000; padding-bottom: env(safe-area-inset-bottom);
-        }
-        .nav-item { text-align: center; color: var(--text-sub); font-size: 11px; flex: 1; cursor: pointer; }
-        .nav-item.active { color: var(--primary); font-weight: 800; }
-        .nav-icon-bg { font-size: 22px; margin-bottom: 4px; transition: transform 0.2s; }
-        .nav-item.active .nav-icon-bg { transform: translateY(-4px); }
-
-        /* 광고 영역 */
+        /* 🔥 하단 배너 광고 영역 추가 🔥 */
         #toss-ad-banner {
-            position: fixed; bottom: 70px; left: 0; width: 100%; min-height: 50px;
+            position: fixed; bottom: 75px; left: 0; right: 0; min-height: 50px;
             background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);
-            display: flex; justify-content: center; align-items: center; z-index: 999;
-            padding-bottom: 2px;
+            display: flex; align-items: center; justify-content: center; z-index: 999;
         }
 
-        .chart-bar-bg { background: #EEE; height: 12px; border-radius: 6px; overflow: hidden; margin: 10px 0; }
-        .chart-bar-fill { background: var(--primary); height: 100%; transition: width 0.5s ease; }
+        /* 하단 네비게이션 */
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: 75px; background: var(--white); display: flex; border-top: 1px solid rgba(0,0,0,0.05); z-index: 1000; }
+        .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #9AA0AF; cursor: pointer; }
+        .nav-item.active { color: var(--primary); }
+        .nav-item.active .nav-icon-bg { background: rgba(107, 155, 232, 0.1); padding: 4px 12px; border-radius: 12px; margin-bottom: 2px; }
+
+        /* 가로 스크롤 탭 */
+        .tabs { display: flex; gap: 8px; margin-bottom: 15px; overflow-x: auto; padding: 5px 0; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .tabs::-webkit-scrollbar { display: none; }
+        .tab { padding: 10px 18px; background: var(--white); border-radius: 20px; font-size: 14px; font-weight: 700; cursor: pointer; color: var(--text-sub); border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0; }
+        .tab.active { background: var(--primary) !important; color: white !important; border: none; }
+
+        /* 카드 및 퀴즈 UI */
+        .card { background: var(--white); padding: 20px; border-radius: 22px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .word-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .word-card { background: var(--white); padding: 20px; border-radius: 20px; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.04); cursor: pointer; }
+        
+        .quiz-card { background: var(--white); padding: 30px 20px; border-radius: 25px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .jp-text-xl { font-size: 58px; font-weight: 800; color: var(--primary); line-height: 1.1; margin-bottom: 15px; cursor: pointer; word-break: break-all; }
+        .meaning-blur { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+        .blurred { filter: blur(10px); user-select: none; }
+
+        .tip-text { font-size: 13px; color: var(--text-sub); text-align: center; margin-bottom: 12px; font-weight: 500; }
+        .kana-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 15px; overflow: hidden; table-layout: fixed; }
+        .kana-table td { border: 1px solid var(--bg); padding: 14px 4px; text-align: center; cursor: pointer; }
+
+        .choice-btn { 
+            width: 100%; 
+            padding: 18px 16px; 
+            margin-top: 10px; 
+            border: 1px solid rgba(0,0,0,0.05); 
+            border-radius: 15px; 
+            background: var(--white); 
+            font-family: 'CustomFont'; 
+            font-weight: 700; 
+            cursor: pointer; 
+            font-size: 20px; 
+            color: var(--text-main); 
+            line-height: 1.4; 
+            word-break: keep-all; 
+            transition: transform 0.1s;
+        }
+        
+        .choice-btn:active { background: #F2F4F6; transform: scale(0.98); }
+        .btn-primary { background: var(--primary) !important; color: white !important; border: none; }
+
+        .chart-bar-bg { width: 100%; height: 8px; background: rgba(0,0,0,0.05); border-radius: 4px; overflow: hidden; margin: 8px 0; }
+        .chart-bar-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.5s; }
     </style>
 </head>
 <body>
@@ -94,33 +109,44 @@
         <div id="loading-content"><div class="spinner"></div></div>
         <div id="error-content" style="display: none; text-align: center; padding: 20px;">
             <p style="font-weight: 800; margin-bottom: 15px;">데이터를 불러오지 못했습니다. 😢</p>
-            <button class="choice-btn" onclick="location.reload()" style="padding: 12px 24px; background: var(--primary); color: white; border: none;">다시 시도하기</button>
+            <button class="choice-btn btn-primary" onclick="location.reload()" style="padding: 12px 24px;">다시 시도하기</button>
         </div>
     </div>
 
     <div class="container">
         <div id="view-home" class="view active">
-            <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 24px;">상황별 일본어 💬</h1>
+            <header><span class="sub-brand" id="user-greeting">퀴즈로 배우는 일본어 ✨</span><h1>기초 문장 💬</h1></header>
             <div id="category-list"></div>
         </div>
 
         <div id="view-words" class="view">
-            <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 24px;">기초 단어 정복 📚</h1>
-            <div id="word-category-list"></div>
+            <header><h1>기초 단어 📚</h1></header>
+            <div class="tip-text" id="word-tip">💡 단어를 탭하면 발음을 들을 수 있어요</div>
+            <div class="tabs" id="word-tabs">
+                <div class="tab active" onclick="changeWordTab('hiragana', this)">히라가나</div>
+                <div class="tab" onclick="changeWordTab('katakana', this)">가타카나</div>
+                <div class="tab" onclick="changeWordTab('numbers', this)">숫자</div>
+                <div class="tab" onclick="changeWordTab('days', this)">시간/날짜</div>
+                <div class="tab" style="color: var(--primary);" onclick="changeWordTab('quiz', this)">⚡️ 단어퀴즈</div>
+            </div>
+            <div id="word-content-container"></div>
         </div>
 
         <div id="view-random" class="view">
-            <div class="quiz-card">
-                <p style="color:var(--text-sub); font-size:14px;">무한 랜덤 챌린지 ⚡️</p>
-                <h2 style="font-size:24px; margin: 20px 0;">랜덤하게 섞인 문장으로<br>실력을 테스트해보세요!</h2>
-                <button class="choice-btn" onclick="startRandomQuiz()" style="background: var(--primary); color:white; border:none; width:80%; margin:0 auto;">시작하기</button>
-            </div>
+            <header><h1>무한 랜덤 퀴즈 ⚡️</h1></header>
+            <div id="random-quiz-area" class="quiz-card"></div>
         </div>
 
         <div id="view-wrong" class="view">
-            <h1 style="font-size: 24px; font-weight: 800; margin-bottom: 8px;">나의 학습 여정 📔</h1>
-            <div class="card" style="flex-direction: column; align-items: flex-start; cursor: default;">
-                <h2 id="total-percent" style="margin:0; color:var(--primary); font-size:28px;">0% 정복</h2>
+            <header><h1>오답 노트 📔</h1></header>
+            <div class="tip-text">틀렸던 문제들을 다시 복습해보세요.</div>
+            <div id="wrong-note-list"></div>
+        </div>
+
+        <div id="view-my" class="view">
+            <header><h1>학습 여정 📊</h1></header>
+            <div class="card" style="flex-direction: column; border: 2px solid var(--primary); cursor: default;">
+                <h2 id="total-percent">0% 정복</h2>
                 <div class="chart-bar-bg" style="width: 100%;"><div id="total-bar" class="chart-bar-fill"></div></div>
                 <p id="total-count" style="font-size:14px; margin-top: 8px;"></p>
             </div>
@@ -130,21 +156,24 @@
         <div id="view-list" class="view">
             <button onclick="handleBack()" style="border:none; background:none; color:var(--primary); font-family:'CustomFont'; font-weight:800; padding:10px 0; font-size: 16px; cursor:pointer;">← 뒤로가기</button>
             <h2 id="list-title"></h2>
+            <div class="tip-text">💡 문장을 탭하면 발음을 들을 수 있어요</div>
             <div id="card-container"></div>
         </div>
     </div>
 
     <div id="toss-ad-banner">
-        <span style="font-size: 10px; color: var(--text-sub);">AD</span>
+        <span style="font-size: 10px; color: #9AA0AF;">AD</span>
     </div>
 
     <nav class="bottom-nav">
         <div class="nav-item active" onclick="changeView('home', this)"><div class="nav-icon-bg">💬</div><span>문장</span></div>
         <div class="nav-item" onclick="changeView('words', this)"><div class="nav-icon-bg">📚</div><span>단어</span></div>
         <div class="nav-item" onclick="changeView('random', this)"><div class="nav-icon-bg">⚡️</div><span>무한랜덤</span></div>
-        <div class="nav-item" onclick="changeView('wrong', this)"><div class="nav-icon-bg">📔</div><span>내 정보</span></div>
+        <div class="nav-item" onclick="changeView('wrong', this)"><div class="nav-icon-bg">📔</div><span>오답노트</span></div>
+        <div class="nav-item" onclick="changeView('my', this)"><div class="nav-icon-bg">📊</div><span>여정</span></div>
     </nav>
 
+    <script src="https://js.toss.im/toss-bridge/v1"></script>
     <script src="app.js"></script>
 </body>
 </html>
