@@ -6,30 +6,29 @@
     <title>기초일본어 퀴즈</title>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
-        /* 1. 폰트 및 테마 설정 (로고 디자인 반영) */
+        /* 1. 폰트 및 테마 설정 */
         @font-face {
             font-family: 'CustomFont';
             src: url('./font2.ttf') format('truetype');
         }
 
         :root { 
-            --primary: #6B9BE8; /* 로고의 메인 파란색으로 변경 */
-            --bg: #F0F5FC;      /* 로고 배경과 어울리는 아주 연한 하늘색 배경 */
+            --primary: #6B9BE8; 
+            --bg: #F0F5FC;      
             --white: #FFFFFF; 
-            --text-main: #2C3E50; /* 조금 더 부드러운 다크블루 텍스트 */
+            --text-main: #2C3E50; 
             --text-sub: #7A8B9E; 
             --success: #4CAF50; 
             --error: #F44336; 
         }
 
         @media (prefers-color-scheme: dark) {
-            :root { --bg: #101418; --white: #1C242C; --text-main: #F0F5FC; --text-sub: #8B9AAB; }
+            :root { --bg: #101418; --white: #1C242C; --text-main: #F0F5FC; --text-sub: #8B95A1; }
         }
 
         body { 
             margin: 0; font-family: 'CustomFont', -apple-system, sans-serif; 
-            background-color: var(--bg); color: var(--text-main); 
-            padding-bottom: 140px; /* 배너 광고 공간 확보를 위해 패딩 증가 */
+            background-color: var(--bg); color: var(--text-main); padding-bottom: 90px; 
         }
 
         .container { padding: 20px; max-width: 500px; margin: 0 auto; }
@@ -39,7 +38,25 @@
         header { margin-bottom: 24px; }
         .sub-brand { font-size: 14px; color: var(--primary); font-weight: 700; margin-bottom: 4px; display: block; }
 
-        /* 로딩 스피너 */
+        /* 🔥 하트 컨테이너 UI 추가 */
+        .heart-container {
+            position: fixed; top: 20px; right: 20px;
+            background: var(--white); padding: 8px 16px; border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); font-weight: 800;
+            color: var(--error); z-index: 1000; display: flex; align-items: center; gap: 6px;
+        }
+
+        /* 🔥 하트 부족 팝업(모달) UI 추가 */
+        #heart-modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); z-index: 10000;
+            display: none; align-items: center; justify-content: center;
+        }
+        .modal-content {
+            background: var(--white); padding: 30px; border-radius: 25px;
+            text-align: center; width: 80%; max-width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
         #loading-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: var(--bg); display: flex; align-items: center; justify-content: center; z-index: 9999;
@@ -47,26 +64,16 @@
         .spinner { width: 32px; height: 32px; border: 3px solid var(--white); border-top: 3px solid var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* 🔥 하단 배너 광고 영역 추가 🔥 */
-        #toss-ad-banner {
-            position: fixed; bottom: 75px; left: 0; right: 0; min-height: 50px;
-            background: var(--white); border-top: 1px solid rgba(0,0,0,0.05);
-            display: flex; align-items: center; justify-content: center; z-index: 999;
-        }
-
-        /* 하단 네비게이션 */
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: 75px; background: var(--white); display: flex; border-top: 1px solid rgba(0,0,0,0.05); z-index: 1000; }
         .nav-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #9AA0AF; cursor: pointer; }
         .nav-item.active { color: var(--primary); }
         .nav-item.active .nav-icon-bg { background: rgba(107, 155, 232, 0.1); padding: 4px 12px; border-radius: 12px; margin-bottom: 2px; }
 
-        /* 가로 스크롤 탭 */
         .tabs { display: flex; gap: 8px; margin-bottom: 15px; overflow-x: auto; padding: 5px 0; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .tabs::-webkit-scrollbar { display: none; }
         .tab { padding: 10px 18px; background: var(--white); border-radius: 20px; font-size: 14px; font-weight: 700; cursor: pointer; color: var(--text-sub); border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0; }
         .tab.active { background: var(--primary) !important; color: white !important; border: none; }
 
-        /* 카드 및 퀴즈 UI */
         .card { background: var(--white); padding: 20px; border-radius: 22px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
         .word-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
         .word-card { background: var(--white); padding: 20px; border-radius: 20px; display: flex; flex-direction: column; box-shadow: 0 2px 8px rgba(0,0,0,0.04); cursor: pointer; }
@@ -80,23 +87,7 @@
         .kana-table { width: 100%; border-collapse: collapse; background: var(--white); border-radius: 15px; overflow: hidden; table-layout: fixed; }
         .kana-table td { border: 1px solid var(--bg); padding: 14px 4px; text-align: center; cursor: pointer; }
 
-        .choice-btn { 
-            width: 100%; 
-            padding: 18px 16px; 
-            margin-top: 10px; 
-            border: 1px solid rgba(0,0,0,0.05); 
-            border-radius: 15px; 
-            background: var(--white); 
-            font-family: 'CustomFont'; 
-            font-weight: 700; 
-            cursor: pointer; 
-            font-size: 20px; 
-            color: var(--text-main); 
-            line-height: 1.4; 
-            word-break: keep-all; 
-            transition: transform 0.1s;
-        }
-        
+        .choice-btn { width: 100%; padding: 18px 16px; margin-top: 10px; border: 1px solid rgba(0,0,0,0.05); border-radius: 15px; background: var(--white); font-family: 'CustomFont'; font-weight: 700; cursor: pointer; font-size: 20px; color: var(--text-main); line-height: 1.4; word-break: keep-all; transition: transform 0.1s; }
         .choice-btn:active { background: #F2F4F6; transform: scale(0.98); }
         .btn-primary { background: var(--primary) !important; color: white !important; border: none; }
 
@@ -105,8 +96,23 @@
     </style>
 </head>
 <body>
+    <div class="heart-container">
+        ❤️ <span id="heart-count">10</span>
+    </div>
+
+    <div id="heart-modal">
+        <div class="modal-content">
+            <h2 style="margin-top:0; color:var(--text-main);">하트가 없어요 💔</h2>
+            <p style="color:var(--text-sub); margin-bottom:20px;">보상 광고를 시청하고<br>하트 10개를 충전하시겠어요?</p>
+            <button class="choice-btn btn-primary" onclick="watchRewardAd()">광고 보고 충전하기</button>
+            <button class="choice-btn" style="background:var(--bg); color:var(--text-main); border:none;" onclick="closeHeartModal()">나중에</button>
+        </div>
+    </div>
+
     <div id="loading-overlay">
-        <div id="loading-content"><div class="spinner"></div></div>
+        <div id="loading-content">
+            <div class="spinner"></div>
+        </div>
         <div id="error-content" style="display: none; text-align: center; padding: 20px;">
             <p style="font-weight: 800; margin-bottom: 15px;">데이터를 불러오지 못했습니다. 😢</p>
             <button class="choice-btn btn-primary" onclick="location.reload()" style="padding: 12px 24px;">다시 시도하기</button>
@@ -115,7 +121,7 @@
 
     <div class="container">
         <div id="view-home" class="view active">
-            <header><span class="sub-brand" id="user-greeting">퀴즈로 배우는 일본어 ✨</span><h1>기초 문장 💬</h1></header>
+            <header><span class="sub-brand" id="user-greeting">기초일본어 퀴즈 ✨</span><h1>기초 문장 💬</h1></header>
             <div id="category-list"></div>
         </div>
 
@@ -159,10 +165,6 @@
             <div class="tip-text">💡 문장을 탭하면 발음을 들을 수 있어요</div>
             <div id="card-container"></div>
         </div>
-    </div>
-
-    <div id="toss-ad-banner">
-        <span style="font-size: 10px; color: #9AA0AF;">AD</span>
     </div>
 
     <nav class="bottom-nav">

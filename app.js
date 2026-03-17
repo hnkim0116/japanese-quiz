@@ -5,26 +5,65 @@ let DB = { sentences: [], words: {}, scenes: {} };
 let currentCardIndex = 0;
 let currentCategoryIds = [];
 
-// 🔥 광고용 카운터 변수 추가
+// 🔥 광고용 카운터 및 하트 변수
 let quizCount = 0; 
+let hearts = localStorage.getItem('user_hearts') ? parseInt(localStorage.getItem('user_hearts')) : 10;
 
 /**
- * [0. 광고 호출 유틸리티 추가]
+ * [0. 광고 호출 유틸리티]
  */
-async function loadBannerAd() {
-    if (window.toss && typeof toss.showAd === 'function') {
-        try { await toss.showAd({ adUnitId: '', type: 'BANNER', containerId: 'toss-ad-banner' }); } catch (e) {}
-    }
-}
+// 전면형 광고 (5문제마다)
 async function showInterstitialAd() {
     if (window.toss && typeof toss.showAd === 'function') {
-        try { await toss.showAd({ adUnitId: '', type: 'INTERSTITIAL' }); } catch (e) {}
+        try { 
+            await toss.showAd({ 
+                adUnitId: 'ait-ad-test-interstitial-id', 
+                type: 'INTERSTITIAL' 
+            }); 
+        } catch (e) { console.warn("전면 광고 호출 실패:", e); }
+    }
+}
+
+// 보상형 광고 (하트 충전용)
+async function watchRewardAd() {
+    if (window.toss && typeof toss.showAd === 'function') {
+        try {
+            await toss.showAd({ 
+                adUnitId: 'ait-ad-test-rewarded-id', // 보상형 광고 테스트 ID
+                type: 'REWARDED' 
+            });
+            // 광고 시청 완료 시 하트 10개 지급
+            hearts += 10;
+            updateHeartUI();
+            closeHeartModal();
+        } catch (e) {
+            console.warn("보상 광고 호출 실패:", e);
+        }
+    } else {
+        // 토스 환경이 아닐 때 테스트용 보상 지급
+        hearts += 10;
+        updateHeartUI();
+        closeHeartModal();
+        alert("하트 10개가 충전되었습니다! ❤️ (테스트 환경)");
     }
 }
 
 /**
- * [1. 핵심 유틸리티]
+ * [1. 핵심 유틸리티 (하트 및 오답노트)]
  */
+function updateHeartUI() {
+    const heartEl = document.getElementById('heart-count');
+    if (heartEl) heartEl.innerText = hearts;
+    localStorage.setItem('user_hearts', hearts);
+}
+
+function showHeartModal() {
+    document.getElementById('heart-modal').style.display = 'flex';
+}
+
+function closeHeartModal() {
+    document.getElementById('heart-modal').style.display = 'none';
+}
 
 function saveWrongNote(id) {
     if (!id) return;
@@ -51,15 +90,13 @@ function speak(text) {
 
 function celebrate() {
     if (typeof confetti === 'function') {
-        // 로고 색상(파랑, 노랑, 초록)에 맞게 폭죽 색상 변경
-        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#6B9BE8', '#FFD13B', '#81C784'] });
+        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 }, colors: ['#6B9BE8', '#FF8CC3', '#4CAF50'] });
     }
 }
 
 /**
  * [2. 데이터 로드 및 초기화]
  */
-
 async function loadData() {
     const loadingContent = document.getElementById('loading-content');
     const errorContent = document.getElementById('error-content');
@@ -85,10 +122,8 @@ async function loadData() {
         };
         
         renderCategories();
+        updateHeartUI(); // 초기 하트 렌더링
         document.getElementById('loading-overlay').style.display = 'none';
-
-        // 🔥 성공 시 하단 배너 로드 추가
-        loadBannerAd();
 
     } catch (e) {
         console.error("Load Error:", e);
@@ -101,7 +136,7 @@ async function initTossBridge() {
     if (typeof window.toss !== 'undefined') {
         try {
             await toss.setNavigationBarColor({
-                color: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#101418' : '#F0F5FC', // 로고 배경색 반영
+                color: window.matchMedia('(prefers-color-scheme: dark)').matches ? '#101418' : '#F0F5FC',
                 buttonColor: '#6B9BE8'
             });
             const user = await toss.getUserInfo();
@@ -116,7 +151,6 @@ async function initTossBridge() {
 /**
  * [3. 내비게이션 관리]
  */
-
 function changeView(viewId, navEl, pushHistory = true) {
     if (pushHistory) history.pushState({ view: viewId }, '', '');
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
@@ -135,25 +169,9 @@ function changeView(viewId, navEl, pushHistory = true) {
     if (viewId === 'words') changeWordTab('hiragana', document.querySelector('#word-tabs .tab'));
 }
 
-window.onpopstate = (e) => {
-    if (!e.state || e.state.view === 'home') {
-        if (window.toss && typeof toss.closeWebView === 'function') {
-            toss.closeWebView();
-        } else {
-            changeView('home', null, false);
-        }
-    } else {
-        const view = e.state.view;
-        changeView(view, null, false);
-    }
-};
-
-function handleBack() { window.history.back(); }
-
 /**
  * [4. 기초 문장 퀴즈]
  */
-
 function renderCategories() {
     const list = document.getElementById('category-list');
     if (!list) return;
@@ -191,6 +209,7 @@ function showNextCard() {
     const container = document.getElementById('card-container');
     if (currentCardIndex >= currentCategoryIds.length) {
         container.innerHTML = `<div class="quiz-card"><h2>🎉 모두 완료했습니다!</h2><button class="choice-btn btn-primary" onclick="handleBack()">목록으로 돌아가기</button></div>`;
+        showInterstitialAd();
         return;
     }
     const id = currentCategoryIds[currentCardIndex];
@@ -208,6 +227,12 @@ function showNextCard() {
 }
 
 function revealQuiz(id) {
+    // 퀴즈 시작 시 하트 확인
+    if (hearts <= 0) {
+        showHeartModal();
+        return;
+    }
+
     const item = DB.sentences.find(s => s.id === id);
     document.getElementById('meaning-box').classList.add('blurred');
     const others = DB.sentences.filter(s => s.id !== id).sort(() => 0.5 - Math.random()).slice(0, 2).map(s => s.meaning);
@@ -218,29 +243,42 @@ function revealQuiz(id) {
 }
 
 function checkCardAnswer(id, selected, correct) {
+    // 혹시 모를 상황 대비 재확인
+    if (hearts <= 0) {
+        showHeartModal();
+        return;
+    }
+
     const fb = document.getElementById('quiz-feedback');
     if (selected === correct) {
         fb.innerHTML = `<span style="color:var(--success)">정답! 🎉</span>`;
         celebrate();
         if (window.toss && toss.vibrate) toss.vibrate('success');
         localStorage.setItem(`mission_${id}`, 'true');
-
-        // 🔥 정답 시 광고 카운트 증가 및 5배수 체크
+        
         quizCount++;
         if (quizCount % 5 === 0) showInterstitialAd();
 
         setTimeout(() => { currentCardIndex++; showNextCard(); }, 800);
     } else {
-        fb.innerHTML = `<span style="color:var(--error)">오답 😢</span>`;
+        // 🔥 오답 처리 시 하트 차감
+        hearts--;
+        updateHeartUI();
+        
+        fb.innerHTML = `<span style="color:var(--error)">오답 😢 (-1 ❤️)</span>`;
         if (window.toss && toss.vibrate) toss.vibrate('error');
         saveWrongNote(id); 
+
+        // 하트가 0이 되면 모달 띄우기
+        if (hearts <= 0) {
+            setTimeout(showHeartModal, 600);
+        }
     }
 }
 
 /**
  * [5. 기초 단어 & 단어 퀴즈]
  */
-
 function changeWordTab(type, el) {
     if (el) {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -280,7 +318,7 @@ function renderWordQuiz() {
     const choices = [item.meaning, ...others].sort(() => 0.5 - Math.random());
     
     container.innerHTML = `<div class="quiz-card" style="box-shadow:none;">
-        <div class="jp-text-xl">${item.kana}</div>
+        <div class="jp-text-xl" style="font-size:52px;">${item.kana}</div>
         <div>${choices.map(c => `<button class="choice-btn" onclick="checkWordQuizAnswer('${c}', '${item.meaning}')">${c}</button>`).join('')}</div>
         <div id="word-quiz-feedback" style="margin-top:15px; font-weight:bold; min-height:22px;"></div>
     </div>`;
@@ -288,22 +326,32 @@ function renderWordQuiz() {
 }
 
 function checkWordQuizAnswer(selected, correct) {
+    if (hearts <= 0) {
+        showHeartModal();
+        return;
+    }
+
     const fb = document.getElementById('word-quiz-feedback');
     if (selected === correct) {
-        fb.innerHTML = `<span style="color:var(--success)">정답!</span>`; celebrate();
-
-        // 🔥 단어 퀴즈 정답 시 광고 카운트 증가
+        fb.innerHTML = `<span style="color:var(--success)">정답! 🎉</span>`; celebrate();
+        
         quizCount++;
         if (quizCount % 5 === 0) showInterstitialAd();
 
         setTimeout(renderWordQuiz, 800);
-    } else fb.innerHTML = `<span style="color:var(--error)">오답</span>`;
+    } else {
+        // 🔥 오답 처리 시 하트 차감
+        hearts--;
+        updateHeartUI();
+        
+        fb.innerHTML = `<span style="color:var(--error)">오답 😢 (-1 ❤️)</span>`;
+        if (hearts <= 0) setTimeout(showHeartModal, 600);
+    }
 }
 
 /**
  * [6. 무한 랜덤 퀴즈]
  */
-
 function nextRandomQuiz() {
     const item = DB.sentences[Math.floor(Math.random() * DB.sentences.length)];
     const modes = ['jpKo', 'koJp', 'audioKo', 'audioJp'];
@@ -330,25 +378,34 @@ function nextRandomQuiz() {
 }
 
 function checkRandomAnswer(id, selected, correct) {
+    if (hearts <= 0) {
+        showHeartModal();
+        return;
+    }
+
     const fb = document.getElementById('random-feedback');
     if (selected === correct) {
         fb.innerHTML = `<span style="color:var(--success)">정답! 🎉</span>`; celebrate();
-
-        // 🔥 랜덤 퀴즈 정답 시 광고 카운트 증가
+        
         quizCount++;
         if (quizCount % 5 === 0) showInterstitialAd();
 
         setTimeout(nextRandomQuiz, 800);
     } else {
-        fb.innerHTML = `<span style="color:var(--error)">오답 😢</span>`;
+        // 🔥 오답 처리 시 하트 차감
+        hearts--;
+        updateHeartUI();
+        
+        fb.innerHTML = `<span style="color:var(--error)">오답 😢 (-1 ❤️)</span>`;
         saveWrongNote(id); 
+        
+        if (hearts <= 0) setTimeout(showHeartModal, 600);
     }
 }
 
 /**
  * [7. 오답 노트 & 여정]
  */
-
 function renderWrongNotes() {
     const container = document.getElementById('wrong-note-list');
     const wrongIds = JSON.parse(localStorage.getItem('wrong_notes') || '[]');
@@ -390,7 +447,19 @@ function updateJourney() {
     }).join('');
 }
 
-// [시작]
+// [시작 및 뒤로가기 제어]
+window.onpopstate = (e) => {
+    if (!e.state || e.state.view === 'home') {
+        if (window.toss && typeof toss.closeWebView === 'function') {
+            toss.closeWebView();
+        } else {
+            changeView('home', null, false);
+        }
+    } else {
+        changeView(e.state.view, null, false);
+    }
+};
+
 window.onload = () => {
     history.replaceState({ view: 'home' }, '', ''); 
     loadData();
