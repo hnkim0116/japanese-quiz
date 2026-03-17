@@ -1,0 +1,3510 @@
+{
+  "scenes": {
+    "일상": ["1","2","3","4","5","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","44","45","46","78","79","80","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","167","168","169","170","171","172","173","174","175","176","178","179","180","181","182","183","184","185","186","187","188","189","190","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220","221","222","223","224","225","226","227","228","229","230","233","234","235","236","237","238","239","240","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300","301","302","303","304","305","306","307","308","309","310","311","312","313","314","315","316","317","318","319","320","321","322","323","324","325","326","327","328","329","330","331","332","333","334","335","336","337","338","339","340","341","342","343","344","345","346","347","348","349","350","351","352","353","354","355","356","357","358","359","360","361","362","363","364","365","371","386","387","391","393","394","395","396","397","398","399","400","401","402","403","404","408","409","410","411","412","413","414","415","416","444","489","490","491","492","493","494","495","500"],
+    "식당·가게": ["6","7","31","32","33","38","39","40","42","43","47","48","49","53","54","55","56","57","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","81","82","83","84","85","86","87","88","89","90","107","163","164","165","166","177","241","242","243","244","245","370","390","406","433","450","451","452","453","454","455","456","457","458","459","460","461","462","463","464","465","466","467","468","469","470","471","474","475","476","477","478","479","480","482","483","484","485","486","487","488"],
+    "여행·교통": ["34","35","36","37","41","50","51","52","58","59","60","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","108","109","110","111","112","113","114","115","116","117","118","119","138","139","140","141","231","232","377","388","389","426","427","428","429","430","431","432","434","435","436","437","438","439","440","441","442","443","445","446","447","448","449","472","473","481","499"],
+    "병원·약국": ["191","192","193","194","195","196","197","198","199","200","201","202","366","367","368","369","372","373","374","376","378","379","380","381","382","383","384","385","392","405","407","417","418","419","420","421","422","423","424","425","496","497","498"]
+  },
+  "sentences": {
+    "1": {
+      "phrase": "こんにちは",
+      "romaji": "konnichiwa",
+      "korean": "콘니치와",
+      "meaning": "안녕하세요",
+      "scene": "일상"
+    },
+    "2": {
+      "phrase": "おはようございます",
+      "romaji": "ohayou gozaimasu",
+      "korean": "오하요 고자이마스",
+      "meaning": "좋은 아침입니다",
+      "scene": "일상"
+    },
+    "3": {
+      "phrase": "こんばんは",
+      "romaji": "konbanwa",
+      "korean": "콘방와",
+      "meaning": "안녕하세요 (저녁)",
+      "scene": "일상"
+    },
+    "4": {
+      "phrase": "ありがとうございます",
+      "romaji": "arigatou gozaimasu",
+      "korean": "아리가또 고자이마스",
+      "meaning": "감사합니다",
+      "scene": "일상"
+    },
+    "5": {
+      "phrase": "すみません",
+      "romaji": "sumimasen",
+      "korean": "스미마센",
+      "meaning": "죄송합니다/실례합니다",
+      "scene": "일상"
+    },
+    "6": {
+      "phrase": "いただきます",
+      "romaji": "itadakimasu",
+      "korean": "이타다키마스",
+      "meaning": "잘 먹겠습니다",
+      "scene": "식당·가게"
+    },
+    "7": {
+      "phrase": "ごちそうさまでした",
+      "romaji": "gochisousama deshita",
+      "korean": "고치소사마데시타",
+      "meaning": "잘 먹었습니다",
+      "scene": "식당·가게"
+    },
+    "8": {
+      "phrase": "はじめまして",
+      "romaji": "hajimemashite",
+      "korean": "하지메마시테",
+      "meaning": "처음 뵙겠습니다",
+      "scene": "일상"
+    },
+    "9": {
+      "phrase": "よろしくおねがいします",
+      "romaji": "yoroshiku onegaishimasu",
+      "korean": "요로시쿠 오네가이시마스",
+      "meaning": "잘 부탁드립니다",
+      "scene": "일상"
+    },
+    "10": {
+      "phrase": "おげんきですか",
+      "romaji": "ogenki desu ka",
+      "korean": "오겡키데스카",
+      "meaning": "잘 지내세요?",
+      "scene": "일상"
+    },
+    "11": {
+      "phrase": "げんきです",
+      "romaji": "genki desu",
+      "korean": "겡키데스",
+      "meaning": "잘 지냅니다",
+      "scene": "일상"
+    },
+    "12": {
+      "phrase": "さようなら",
+      "romaji": "sayounara",
+      "korean": "사요나라",
+      "meaning": "안녕히 가세요",
+      "scene": "일상"
+    },
+    "13": {
+      "phrase": "またあした",
+      "romaji": "mata ashita",
+      "korean": "마타 아시타",
+      "meaning": "내일 봐요",
+      "scene": "일상"
+    },
+    "14": {
+      "phrase": "おやすみなさい",
+      "romaji": "oyasuminasai",
+      "korean": "오야스미나사이",
+      "meaning": "안녕히 주무세요",
+      "scene": "일상"
+    },
+    "15": {
+      "phrase": "いってきます",
+      "romaji": "ittekimasu",
+      "korean": "잇테키마스",
+      "meaning": "다녀오겠습니다",
+      "scene": "일상"
+    },
+    "16": {
+      "phrase": "いってらっしゃい",
+      "romaji": "itterasshai",
+      "korean": "잇테랏샤이",
+      "meaning": "다녀오세요",
+      "scene": "일상"
+    },
+    "17": {
+      "phrase": "ただいま",
+      "romaji": "tadaima",
+      "korean": "타다이마",
+      "meaning": "다녀왔습니다",
+      "scene": "일상"
+    },
+    "18": {
+      "phrase": "おかえりなさい",
+      "romaji": "okaerinasai",
+      "korean": "오카에리나사이",
+      "meaning": "어서 오세요",
+      "scene": "일상"
+    },
+    "19": {
+      "phrase": "わかりました",
+      "romaji": "wakarimashita",
+      "korean": "와카리마시타",
+      "meaning": "알겠습니다",
+      "scene": "일상"
+    },
+    "20": {
+      "phrase": "わかりません",
+      "romaji": "wakarimasen",
+      "korean": "와카리마센",
+      "meaning": "모르겠습니다",
+      "scene": "일상"
+    },
+    "21": {
+      "phrase": "はい",
+      "romaji": "hai",
+      "korean": "하이",
+      "meaning": "네",
+      "scene": "일상"
+    },
+    "22": {
+      "phrase": "いいえ",
+      "romaji": "iie",
+      "korean": "이이에",
+      "meaning": "아니요",
+      "scene": "일상"
+    },
+    "23": {
+      "phrase": "だいじょうぶです",
+      "romaji": "daijoubu desu",
+      "korean": "다이죠부데스",
+      "meaning": "괜찮습니다",
+      "scene": "일상"
+    },
+    "24": {
+      "phrase": "ごめんなさい",
+      "romaji": "gomennasai",
+      "korean": "고멘나사이",
+      "meaning": "미안합니다",
+      "scene": "일상"
+    },
+    "25": {
+      "phrase": "どういたしまして",
+      "romaji": "douitashimashite",
+      "korean": "도이타시마시테",
+      "meaning": "천만에요",
+      "scene": "일상"
+    },
+    "26": {
+      "phrase": "おねがいします",
+      "romaji": "onegaishimasu",
+      "korean": "오네가이시마스",
+      "meaning": "부탁드립니다",
+      "scene": "일상"
+    },
+    "27": {
+      "phrase": "しつれいします",
+      "romaji": "shitsurei shimasu",
+      "korean": "시츠레이시마스",
+      "meaning": "실례합니다",
+      "scene": "일상"
+    },
+    "28": {
+      "phrase": "おつかれさまです",
+      "romaji": "otsukaresama desu",
+      "korean": "오츠카레사마데스",
+      "meaning": "수고하셨습니다",
+      "scene": "일상"
+    },
+    "29": {
+      "phrase": "がんばってください",
+      "romaji": "ganbatte kudasai",
+      "korean": "간밧테쿠다사이",
+      "meaning": "힘내세요",
+      "scene": "일상"
+    },
+    "30": {
+      "phrase": "おめでとうございます",
+      "romaji": "omedetou gozaimasu",
+      "korean": "오메데토 고자이마스",
+      "meaning": "축하합니다",
+      "scene": "일상"
+    },
+    "31": {
+      "phrase": "よやくはひつようですか",
+      "romaji": "yoyaku wa hitsuyou desu ka",
+      "korean": "요야쿠와 히츠요 데스카",
+      "meaning": "예약이 필요하나요?",
+      "scene": "식당·가게"
+    },
+    "32": {
+      "phrase": "テイクアウトします",
+      "romaji": "teikuauto shimasu",
+      "korean": "테이쿠아우토 시마스",
+      "meaning": "테이크아웃할게요",
+      "scene": "식당·가게"
+    },
+    "33": {
+      "phrase": "かいてんじかんはなんじですか",
+      "romaji": "kaitenjikan wa nanji desu ka",
+      "korean": "카이텐지칸와 난지 데스카",
+      "meaning": "오픈시간이 몇시에요?",
+      "scene": "식당·가게"
+    },
+    "34": {
+      "phrase": "しゃしんをとってください",
+      "romaji": "shashin wo totte kudasai",
+      "korean": "샤신오 톳테쿠다사이",
+      "meaning": "사진을 찍어주세요",
+      "scene": "여행·교통"
+    },
+    "35": {
+      "phrase": "りょうきんはいくらですか",
+      "romaji": "ryoukin wa ikura desu ka",
+      "korean": "료킨와 이쿠라 데스카",
+      "meaning": "요금은 얼마에요?",
+      "scene": "여행·교통"
+    },
+    "36": {
+      "phrase": "しはつはなんじですか",
+      "romaji": "shihatsu wa nanji desu ka",
+      "korean": "시하츠와 난지 데스카",
+      "meaning": "첫차가 몇시에요?",
+      "scene": "여행·교통"
+    },
+    "37": {
+      "phrase": "しゅうではなんじですか",
+      "romaji": "shuuden wa nanji desu ka",
+      "korean": "슈우덴와 난지 데스카",
+      "meaning": "막차 몇시에요?",
+      "scene": "여행·교통"
+    },
+    "38": {
+      "phrase": "ウェイトありますか",
+      "romaji": "weito arimasu ka",
+      "korean": "웨이토 아리마스카",
+      "meaning": "대기 있어요?",
+      "scene": "식당·가게"
+    },
+    "39": {
+      "phrase": "テラスにします",
+      "romaji": "terasu ni shimasu",
+      "korean": "테라스니 시마스",
+      "meaning": "테라스 자리로 할게요",
+      "scene": "식당·가게"
+    },
+    "40": {
+      "phrase": "セルフありますか",
+      "romaji": "serufu arimasu ka",
+      "korean": "셀프 아리마스카",
+      "meaning": "셀프서비스예요?",
+      "scene": "식당·가게"
+    },
+    "41": {
+      "phrase": "ICカードいけますか",
+      "romaji": "IC kaado ikemasu ka",
+      "korean": "아이씨 카도 이케마스카",
+      "meaning": "IC카드 되나요?",
+      "scene": "여행·교통"
+    },
+    "42": {
+      "phrase": "こどもメニューありますか",
+      "romaji": "kodomo menyuu arimasu ka",
+      "korean": "코도모 메뉴 아리마스카",
+      "meaning": "어린이 메뉴 있나요?",
+      "scene": "식당·가게"
+    },
+    "43": {
+      "phrase": "アレルギーあります",
+      "romaji": "arerugii arimasu",
+      "korean": "아레루기 아리마스",
+      "meaning": "알레르기 있어요",
+      "scene": "식당·가게"
+    },
+    "44": {
+      "phrase": "いまなんじですか",
+      "romaji": "ima nanji desu ka",
+      "korean": "이마 난지데스카",
+      "meaning": "지금 몇 시예요?",
+      "scene": "일상"
+    },
+    "45": {
+      "phrase": "いちじです",
+      "romaji": "ichiji desu",
+      "korean": "이치지데스",
+      "meaning": "1시입니다",
+      "scene": "일상"
+    },
+    "46": {
+      "phrase": "にじはんです",
+      "romaji": "niji han desu",
+      "korean": "니지한데스",
+      "meaning": "2시 반입니다",
+      "scene": "일상"
+    },
+    "47": {
+      "phrase": "おかわりできますか",
+      "romaji": "okawari dekimasu ka",
+      "korean": "오카와리 데키마스카",
+      "meaning": "리필 가능하나요?",
+      "scene": "식당·가게"
+    },
+    "48": {
+      "phrase": "ソースかけますか",
+      "romaji": "soosu kakeru masu ka",
+      "korean": "소스 카케루마스카",
+      "meaning": "소스 따로 주나요?",
+      "scene": "식당·가게"
+    },
+    "49": {
+      "phrase": "ごはんおかわりします",
+      "romaji": "gohan okawari shimasu",
+      "korean": "고한 오카와리 시마스",
+      "meaning": "밥 한 공기 더 주세요",
+      "scene": "식당·가게"
+    },
+    "50": {
+      "phrase": "きっぷにまいください",
+      "romaji": "kippu ni mai kudasai",
+      "korean": "키쁘 니마이 쿠다사이",
+      "meaning": "표 2장 주세요",
+      "scene": "여행·교통"
+    },
+    "51": {
+      "phrase": "おうふくきっぷください",
+      "romaji": "ouhuku kippu kudasai",
+      "korean": "오후쿠 키쁘 쿠다사이",
+      "meaning": "왕복표 주세요",
+      "scene": "여행·교통"
+    },
+    "52": {
+      "phrase": "エレベーターはどこですか",
+      "romaji": "erebeetaa wa doko desu ka",
+      "korean": "에레베타와 도코 데스카",
+      "meaning": "엘리베이터는 어디있어요?",
+      "scene": "여행·교통"
+    },
+    "53": {
+      "phrase": "あたためてください",
+      "romaji": "atatamete kudasai",
+      "korean": "아타타메떼 쿠다사이",
+      "meaning": "데워주세요",
+      "scene": "식당·가게"
+    },
+    "54": {
+      "phrase": "かみなぷきんください",
+      "romaji": "kami napukin kudasai",
+      "korean": "카미 나푸킨 쿠다사이",
+      "meaning": "티슈 주세요",
+      "scene": "식당·가게"
+    },
+    "55": {
+      "phrase": "これぜんぶいくらですか",
+      "romaji": "kore zenbu ikura desu ka",
+      "korean": "코레 젠부 이쿠라 데스카",
+      "meaning": "이거 전부 얼마예요?",
+      "scene": "식당·가게"
+    },
+    "56": {
+      "phrase": "トイレットペーパーありますか",
+      "romaji": "toiretto peeper arimasu ka",
+      "korean": "토레또 페퍼 아리마스카",
+      "meaning": "화장실 휴지 있나요?",
+      "scene": "식당·가게"
+    },
+    "57": {
+      "phrase": "これはなんですか",
+      "romaji": "kore wa nan desu ka",
+      "korean": "코레와 난데스카",
+      "meaning": "이것은 무엇입니까?",
+      "scene": "식당·가게"
+    },
+    "58": {
+      "phrase": "にもつおきばありますか",
+      "romaji": "nimotsu oki ba arimasu ka",
+      "korean": "니모츠 오키바 아리마스카",
+      "meaning": "짐 놓을 곳 있나요?",
+      "scene": "여행·교통"
+    },
+    "59": {
+      "phrase": "どこですか",
+      "romaji": "doko desu ka",
+      "korean": "도코데스카",
+      "meaning": "어디입니까?",
+      "scene": "여행·교통"
+    },
+    "60": {
+      "phrase": "ここです",
+      "romaji": "koko desu",
+      "korean": "코코데스",
+      "meaning": "여기입니다",
+      "scene": "여행·교통"
+    },
+    "61": {
+      "phrase": "メニューをください",
+      "romaji": "menyuu wo kudasai",
+      "korean": "메뉴오 쿠다사이",
+      "meaning": "메뉴 주세요",
+      "scene": "식당·가게"
+    },
+    "62": {
+      "phrase": "これをください",
+      "romaji": "kore wo kudasai",
+      "korean": "코레오 쿠다사이",
+      "meaning": "이것 주세요",
+      "scene": "식당·가게"
+    },
+    "63": {
+      "phrase": "おすすめはなんですか",
+      "romaji": "osusume wa nan desu ka",
+      "korean": "오스스메와 난데스카",
+      "meaning": "추천 메뉴는 무엇인가요?",
+      "scene": "식당·가게"
+    },
+    "64": {
+      "phrase": "おいしいです",
+      "romaji": "oishii desu",
+      "korean": "오이시이데스",
+      "meaning": "맛있습니다",
+      "scene": "식당·가게"
+    },
+    "65": {
+      "phrase": "おみずをください",
+      "romaji": "omizu wo kudasai",
+      "korean": "오미즈오 쿠다사이",
+      "meaning": "물 주세요",
+      "scene": "식당·가게"
+    },
+    "66": {
+      "phrase": "おかいけいおねがいします",
+      "romaji": "okaikei onegaishimasu",
+      "korean": "오카이케이 오네가이시마스",
+      "meaning": "계산 부탁드립니다",
+      "scene": "식당·가게"
+    },
+    "67": {
+      "phrase": "いくらですか",
+      "romaji": "ikura desu ka",
+      "korean": "이쿠라데스카",
+      "meaning": "얼마입니까?",
+      "scene": "식당·가게"
+    },
+    "68": {
+      "phrase": "たかいです",
+      "romaji": "takai desu",
+      "korean": "타카이데스",
+      "meaning": "비쌉니다",
+      "scene": "식당·가게"
+    },
+    "69": {
+      "phrase": "やすいです",
+      "romaji": "yasui desu",
+      "korean": "야스이데스",
+      "meaning": "쌉니다",
+      "scene": "식당·가게"
+    },
+    "70": {
+      "phrase": "カードでもいいですか",
+      "romaji": "kaado demo ii desu ka",
+      "korean": "카도데모 이데스카",
+      "meaning": "카드로 해도 됩니까?",
+      "scene": "식당·가게"
+    },
+    "71": {
+      "phrase": "ラーメンをください",
+      "romaji": "raamen wo kudasai",
+      "korean": "라멘오 쿠다사이",
+      "meaning": "라멘 주세요",
+      "scene": "식당·가게"
+    },
+    "72": {
+      "phrase": "コーヒーをおねがいします",
+      "romaji": "koohii wo onegaishimasu",
+      "korean": "코히오 오네가이시마스",
+      "meaning": "커피 부탁합니다",
+      "scene": "식당·가게"
+    },
+    "73": {
+      "phrase": "すしがすきです",
+      "romaji": "sushi ga suki desu",
+      "korean": "스시가 스키데스",
+      "meaning": "초밥을 좋아합니다",
+      "scene": "식당·가게"
+    },
+    "74": {
+      "phrase": "からいですか",
+      "romaji": "karai desu ka",
+      "korean": "카라이데스카",
+      "meaning": "맵습니까?",
+      "scene": "식당·가게"
+    },
+    "75": {
+      "phrase": "あまいです",
+      "romaji": "amai desu",
+      "korean": "아마이데스",
+      "meaning": "답니다",
+      "scene": "식당·가게"
+    },
+    "76": {
+      "phrase": "ビールをください",
+      "romaji": "biiru wo kudasai",
+      "korean": "비루오 쿠다사이",
+      "meaning": "맥주 주세요",
+      "scene": "식당·가게"
+    },
+    "77": {
+      "phrase": "かんぱい",
+      "romaji": "kanpai",
+      "korean": "칸파이",
+      "meaning": "건배",
+      "scene": "식당·가게"
+    },
+    "78": {
+      "phrase": "おなかがすきました",
+      "romaji": "onaka ga sukimashita",
+      "korean": "오나카가 스키마시타",
+      "meaning": "배고픕니다",
+      "scene": "일상"
+    },
+    "79": {
+      "phrase": "のどがかわきました",
+      "romaji": "nodo ga kawakimashita",
+      "korean": "노도가 카와키마시타",
+      "meaning": "목마릅니다",
+      "scene": "일상"
+    },
+    "80": {
+      "phrase": "おなかがいっぱいです",
+      "romaji": "onaka ga ippai desu",
+      "korean": "오나카가 잇파이데스",
+      "meaning": "배부릅니다",
+      "scene": "일상"
+    },
+    "81": {
+      "phrase": "これをみせてください",
+      "romaji": "kore wo misete kudasai",
+      "korean": "코레오 미세테쿠다사이",
+      "meaning": "이것을 보여주세요",
+      "scene": "식당·가게"
+    },
+    "82": {
+      "phrase": "しちゃくしてもいいですか",
+      "romaji": "shichaku shitemo ii desu ka",
+      "korean": "시차쿠시테모 이데스카",
+      "meaning": "입어봐도 됩니까?",
+      "scene": "식당·가게"
+    },
+    "83": {
+      "phrase": "ちいさいサイズはありますか",
+      "romaji": "chiisai saizu wa arimasu ka",
+      "korean": "치사이 사이즈와 아리마스카",
+      "meaning": "작은 사이즈 있습니까?",
+      "scene": "식당·가게"
+    },
+    "84": {
+      "phrase": "おおきいサイズをください",
+      "romaji": "ookii saizu wo kudasai",
+      "korean": "오키 사이즈오 쿠다사이",
+      "meaning": "큰 사이즈 주세요",
+      "scene": "식당·가게"
+    },
+    "85": {
+      "phrase": "ほかのいろはありますか",
+      "romaji": "hoka no iro wa arimasu ka",
+      "korean": "호카노 이로와 아리마스카",
+      "meaning": "다른 색 있습니까?",
+      "scene": "식당·가게"
+    },
+    "86": {
+      "phrase": "これをかいます",
+      "romaji": "kore wo kaimasu",
+      "korean": "코레오 카이마스",
+      "meaning": "이것을 삽니다",
+      "scene": "식당·가게"
+    },
+    "87": {
+      "phrase": "ふくろをください",
+      "romaji": "fukuro wo kudasai",
+      "korean": "후쿠로오 쿠다사이",
+      "meaning": "봉투 주세요",
+      "scene": "식당·가게"
+    },
+    "88": {
+      "phrase": "レシートをください",
+      "romaji": "reshiito wo kudasai",
+      "korean": "레시토오 쿠다사이",
+      "meaning": "영수증 주세요",
+      "scene": "식당·가게"
+    },
+    "89": {
+      "phrase": "セールはいつですか",
+      "romaji": "seeru wa itsu desu ka",
+      "korean": "세루와 이츠데스카",
+      "meaning": "세일은 언제입니까?",
+      "scene": "식당·가게"
+    },
+    "90": {
+      "phrase": "まけてください",
+      "romaji": "makete kudasai",
+      "korean": "마케테쿠다사이",
+      "meaning": "깎아주세요",
+      "scene": "식당·가게"
+    },
+    "91": {
+      "phrase": "えきはどこですか",
+      "romaji": "eki wa doko desu ka",
+      "korean": "에키와 도코데스카",
+      "meaning": "역은 어디입니까?",
+      "scene": "여행·교통"
+    },
+    "92": {
+      "phrase": "まっすぐいってください",
+      "romaji": "massugu itte kudasai",
+      "korean": "맛스구 잇테쿠다사이",
+      "meaning": "똑바로 가세요",
+      "scene": "여행·교통"
+    },
+    "93": {
+      "phrase": "みぎにまがってください",
+      "romaji": "migi ni magatte kudasai",
+      "korean": "미기니 마갓테쿠다사이",
+      "meaning": "오른쪽으로 도세요",
+      "scene": "여행·교통"
+    },
+    "94": {
+      "phrase": "ひだりにまがってください",
+      "romaji": "hidari ni magatte kudasai",
+      "korean": "히다리니 마갓테쿠다사이",
+      "meaning": "왼쪽으로 도세요",
+      "scene": "여행·교통"
+    },
+    "95": {
+      "phrase": "ちかいですか",
+      "romaji": "chikai desu ka",
+      "korean": "치카이데스카",
+      "meaning": "가깝습니까?",
+      "scene": "여행·교통"
+    },
+    "96": {
+      "phrase": "とおいですか",
+      "romaji": "tooi desu ka",
+      "korean": "토이데스카",
+      "meaning": "멉니까?",
+      "scene": "여행·교통"
+    },
+    "97": {
+      "phrase": "タクシーをよんでください",
+      "romaji": "takushii wo yonde kudasai",
+      "korean": "타쿠시오 욘데쿠다사이",
+      "meaning": "택시를 불러주세요",
+      "scene": "여행·교통"
+    },
+    "98": {
+      "phrase": "くうこうまでおねがいします",
+      "romaji": "kuukou made onegaishimasu",
+      "korean": "쿠코마데 오네가이시마스",
+      "meaning": "공항까지 부탁합니다",
+      "scene": "여행·교통"
+    },
+    "99": {
+      "phrase": "ここでとめてください",
+      "romaji": "koko de tomete kudasai",
+      "korean": "코코데 토메테쿠다사이",
+      "meaning": "여기서 세워주세요",
+      "scene": "여행·교통"
+    },
+    "100": {
+      "phrase": "でんしゃにのります",
+      "romaji": "densha ni norimasu",
+      "korean": "덴샤니 노리마스",
+      "meaning": "전철을 탑니다",
+      "scene": "여행·교통"
+    },
+    "101": {
+      "phrase": "どのせんですか",
+      "romaji": "dono sen desu ka",
+      "korean": "도노 센데스카",
+      "meaning": "어느 선입니까?(전철)",
+      "scene": "여행·교통"
+    },
+    "102": {
+      "phrase": "きっぷをかいます",
+      "romaji": "kippu wo kaimasu",
+      "korean": "킵푸오 카이마스",
+      "meaning": "표를 삽니다",
+      "scene": "여행·교통"
+    },
+    "103": {
+      "phrase": "のりかえはどこですか",
+      "romaji": "norikae wa doko desu ka",
+      "korean": "노리카에와 도코데스카",
+      "meaning": "환승은 어디입니까?",
+      "scene": "여행·교통"
+    },
+    "104": {
+      "phrase": "つぎのえきでおります",
+      "romaji": "tsugi no eki de orimasu",
+      "korean": "츠기노 에키데 오리마스",
+      "meaning": "다음 역에서 내립니다",
+      "scene": "여행·교통"
+    },
+    "105": {
+      "phrase": "バスていはどこですか",
+      "romaji": "basutei wa doko desu ka",
+      "korean": "바스테이와 도코데스카",
+      "meaning": "버스 정류장은 어디입니까?",
+      "scene": "여행·교통"
+    },
+    "106": {
+      "phrase": "なんばんのバスですか",
+      "romaji": "nanban no basu desu ka",
+      "korean": "난반노 바스데스카",
+      "meaning": "몇 번 버스입니까?",
+      "scene": "여행·교통"
+    },
+    "107": {
+      "phrase": "よやくをおねがいします",
+      "romaji": "yoyaku wo onegaishimasu",
+      "korean": "요야쿠오 오네가이시마스",
+      "meaning": "예약 부탁합니다",
+      "scene": "식당·가게"
+    },
+    "108": {
+      "phrase": "チェックインおねがいします",
+      "romaji": "chekkuin onegaishimasu",
+      "korean": "첵킨 오네가이시마스",
+      "meaning": "체크인 부탁합니다",
+      "scene": "여행·교통"
+    },
+    "109": {
+      "phrase": "チェックアウトおねがいします",
+      "romaji": "chekkuauto onegaishimasu",
+      "korean": "첵아웃 오네가이시마스",
+      "meaning": "체크아웃 부탁합니다",
+      "scene": "여행·교통"
+    },
+    "110": {
+      "phrase": "かぎをなくしました",
+      "romaji": "kagi wo nakushimashita",
+      "korean": "카기오 나쿠시마시타",
+      "meaning": "열쇠를 잃어버렸습니다",
+      "scene": "여행·교통"
+    },
+    "111": {
+      "phrase": "WiFiのパスワードはなんですか",
+      "romaji": "waifai no pasuwaado wa nan desu ka",
+      "korean": "와이파이노 파스와도와 난데스카",
+      "meaning": "와이파이 비밀번호는 무엇입니까?",
+      "scene": "여행·교통"
+    },
+    "112": {
+      "phrase": "あさごはんはなんじですか",
+      "romaji": "asagohan wa nanji desu ka",
+      "korean": "아사고한와 난지데스카",
+      "meaning": "아침식사는 몇 시입니까?",
+      "scene": "여행·교통"
+    },
+    "113": {
+      "phrase": "へやをそうじしてください",
+      "romaji": "heya wo souji shite kudasai",
+      "korean": "헤야오 소지시테쿠다사이",
+      "meaning": "방을 청소해주세요",
+      "scene": "여행·교통"
+    },
+    "114": {
+      "phrase": "タオルをください",
+      "romaji": "taoru wo kudasai",
+      "korean": "타오루오 쿠다사이",
+      "meaning": "수건 주세요",
+      "scene": "여행·교통"
+    },
+    "115": {
+      "phrase": "エアコンがこわれました",
+      "romaji": "eakon ga kowaremashita",
+      "korean": "에아콘가 코와레마시타",
+      "meaning": "에어컨이 고장났습니다",
+      "scene": "여행·교통"
+    },
+    "116": {
+      "phrase": "しずかなへやがいいです",
+      "romaji": "shizukana heya ga ii desu",
+      "korean": "시즈카나 헤야가 이데스",
+      "meaning": "조용한 방이 좋습니다",
+      "scene": "여행·교통"
+    },
+    "117": {
+      "phrase": "うみがみえるへやがいいです",
+      "romaji": "umi ga mieru heya ga ii desu",
+      "korean": "우미가 미에루 헤야가 이데스",
+      "meaning": "바다가 보이는 방이 좋습니다",
+      "scene": "여행·교통"
+    },
+    "118": {
+      "phrase": "にもつをあずけてもいいですか",
+      "romaji": "nimotsu wo azuketemo ii desu ka",
+      "korean": "니모츠오 아즈케테모 이데스카",
+      "meaning": "짐을 맡겨도 됩니까?",
+      "scene": "여행·교통"
+    },
+    "119": {
+      "phrase": "モーニングコールをおねがいします",
+      "romaji": "mooningu kooru wo onegaishimasu",
+      "korean": "모닝구 코루오 오네가이시마스",
+      "meaning": "모닝콜 부탁합니다",
+      "scene": "여행·교통"
+    },
+    "120": {
+      "phrase": "おなまえはなんですか",
+      "romaji": "onamae wa nan desu ka",
+      "korean": "오나마에와 난데스카",
+      "meaning": "이름이 무엇입니까?",
+      "scene": "일상"
+    },
+    "121": {
+      "phrase": "わたしのなまえはミンスです",
+      "romaji": "watashi no namae wa insu desu",
+      "korean": "와타시노 나마에와 민수데스",
+      "meaning": "제 이름은 민수입니다",
+      "scene": "일상"
+    },
+    "122": {
+      "phrase": "どちらからきましたか",
+      "romaji": "dochira kara kimashita ka",
+      "korean": "도치라카라 키마시타카",
+      "meaning": "어디에서 오셨습니까?",
+      "scene": "일상"
+    },
+    "123": {
+      "phrase": "かんこくからきました",
+      "romaji": "kankoku kara kimashita",
+      "korean": "칸코쿠카라 키마시타",
+      "meaning": "한국에서 왔습니다",
+      "scene": "일상"
+    },
+    "124": {
+      "phrase": "おしごとはなんですか",
+      "romaji": "oshigoto wa nan desu ka",
+      "korean": "오시고토와 난데스카",
+      "meaning": "직업이 무엇입니까?",
+      "scene": "일상"
+    },
+    "125": {
+      "phrase": "がくせいです",
+      "romaji": "gakusei desu",
+      "korean": "가쿠세이데스",
+      "meaning": "학생입니다",
+      "scene": "일상"
+    },
+    "126": {
+      "phrase": "かいしゃいんです",
+      "romaji": "kaishain desu",
+      "korean": "카이샤인데스",
+      "meaning": "회사원입니다",
+      "scene": "일상"
+    },
+    "127": {
+      "phrase": "なんさいですか",
+      "romaji": "nansai desu ka",
+      "korean": "난사이데스카",
+      "meaning": "몇 살입니까?",
+      "scene": "일상"
+    },
+    "128": {
+      "phrase": "にじゅっさいです",
+      "romaji": "nijussai desu",
+      "korean": "니쥿사이데스",
+      "meaning": "20살입니다",
+      "scene": "일상"
+    },
+    "129": {
+      "phrase": "けっこんしていますか",
+      "romaji": "kekkon shite imasu ka",
+      "korean": "켓콘시테이마스카",
+      "meaning": "결혼하셨습니까?",
+      "scene": "일상"
+    },
+    "130": {
+      "phrase": "どくしんです",
+      "romaji": "dokushin desu",
+      "korean": "도쿠신데스",
+      "meaning": "독신입니다",
+      "scene": "일상"
+    },
+    "131": {
+      "phrase": "しゅみはなんですか",
+      "romaji": "shumi wa nan desu ka",
+      "korean": "슈미와 난데스카",
+      "meaning": "취미가 무엇입니까?",
+      "scene": "일상"
+    },
+    "132": {
+      "phrase": "おんがくをききます",
+      "romaji": "ongaku wo kikimasu",
+      "korean": "온가쿠오 키키마스",
+      "meaning": "음악을 듣습니다",
+      "scene": "일상"
+    },
+    "133": {
+      "phrase": "えいがをみます",
+      "romaji": "eiga wo mimasu",
+      "korean": "에가오 미마스",
+      "meaning": "영화를 봅니다",
+      "scene": "일상"
+    },
+    "134": {
+      "phrase": "ほんをよみます",
+      "romaji": "hon wo yomimasu",
+      "korean": "혼오 요미마스",
+      "meaning": "책을 읽습니다",
+      "scene": "일상"
+    },
+    "135": {
+      "phrase": "りょこうがすきです",
+      "romaji": "ryokou ga suki desu",
+      "korean": "료코가 스키데스",
+      "meaning": "여행을 좋아합니다",
+      "scene": "일상"
+    },
+    "136": {
+      "phrase": "スポーツがすきです",
+      "romaji": "supootsu ga suki desu",
+      "korean": "스포츠가 스키데스",
+      "meaning": "스포츠를 좋아합니다",
+      "scene": "일상"
+    },
+    "137": {
+      "phrase": "にほんごをべんきょうしています",
+      "romaji": "nihongo wo benkyou shite imasu",
+      "korean": "니혼고오 벤쿄시테이마스",
+      "meaning": "일본어를 공부하고 있습니다",
+      "scene": "일상"
+    },
+    "138": {
+      "phrase": "どのくらいにほんにいますか",
+      "romaji": "dono kurai nihon ni imasu ka",
+      "korean": "도노쿠라이 니혼니 이마스카",
+      "meaning": "얼마나 일본에 있습니까?",
+      "scene": "여행·교통"
+    },
+    "139": {
+      "phrase": "このでんしゃはとうきょういきますか",
+      "romaji": "kono densha wa toukyou ikimasu ka",
+      "korean": "코노덴샤 와 토쿄 이키마스 카",
+      "meaning": "이 전철이 도쿄행인가요?",
+      "scene": "여행·교통"
+    },
+    "140": {
+      "phrase": "にほんははじめてですか",
+      "romaji": "nihon wa hajimete desu ka",
+      "korean": "니혼와 하지메테데스카",
+      "meaning": "일본은 처음입니까?",
+      "scene": "여행·교통"
+    },
+    "141": {
+      "phrase": "きっぷはどこでかえますか",
+      "romaji": "kippu wa doko de kaemasu ka",
+      "korean": "킵푸 와 도코 데 카에마스 카",
+      "meaning": "표는 어디서 살 수 있나요?",
+      "scene": "여행·교통"
+    },
+    "142": {
+      "phrase": "にほんがすきです",
+      "romaji": "nihon ga suki desu",
+      "korean": "니혼가 스키데스",
+      "meaning": "일본을 좋아합니다",
+      "scene": "일상"
+    },
+    "143": {
+      "phrase": "とてもきれいです",
+      "romaji": "totemo kirei desu",
+      "korean": "토테모 키레이데스",
+      "meaning": "매우 예쁩니다",
+      "scene": "일상"
+    },
+    "144": {
+      "phrase": "おもしろいです",
+      "romaji": "omoshiroi desu",
+      "korean": "오모시로이데스",
+      "meaning": "재미있습니다",
+      "scene": "일상"
+    },
+    "145": {
+      "phrase": "つまらないです",
+      "romaji": "tsumaranai desu",
+      "korean": "츠마라나이데스",
+      "meaning": "재미없습니다",
+      "scene": "일상"
+    },
+    "146": {
+      "phrase": "むずかしいです",
+      "romaji": "muzukashii desu",
+      "korean": "무즈카시데스",
+      "meaning": "어렵습니다",
+      "scene": "일상"
+    },
+    "147": {
+      "phrase": "やさしいです",
+      "romaji": "yasashii desu",
+      "korean": "야사시데스",
+      "meaning": "쉽습니다/친절합니다",
+      "scene": "일상"
+    },
+    "148": {
+      "phrase": "うれしいです",
+      "romaji": "ureshii desu",
+      "korean": "우레시데스",
+      "meaning": "기쁩니다",
+      "scene": "일상"
+    },
+    "149": {
+      "phrase": "かなしいです",
+      "romaji": "kanashii desu",
+      "korean": "카나시데스",
+      "meaning": "슬픕니다",
+      "scene": "일상"
+    },
+    "150": {
+      "phrase": "さびしいです",
+      "romaji": "sabishii desu",
+      "korean": "사비시데스",
+      "meaning": "외롭습니다",
+      "scene": "일상"
+    },
+    "151": {
+      "phrase": "たのしいです",
+      "romaji": "tanoshii desu",
+      "korean": "타노시데스",
+      "meaning": "즐겁습니다",
+      "scene": "일상"
+    },
+    "152": {
+      "phrase": "つかれました",
+      "romaji": "tsukaremashita",
+      "korean": "츠카레마시타",
+      "meaning": "피곤합니다",
+      "scene": "일상"
+    },
+    "153": {
+      "phrase": "ねむいです",
+      "romaji": "nemui desu",
+      "korean": "네무이데스",
+      "meaning": "졸립니다",
+      "scene": "일상"
+    },
+    "154": {
+      "phrase": "あついです",
+      "romaji": "atsui desu",
+      "korean": "아츠이데스",
+      "meaning": "덥습니다",
+      "scene": "일상"
+    },
+    "155": {
+      "phrase": "さむいです",
+      "romaji": "samui desu",
+      "korean": "사무이데스",
+      "meaning": "춥습니다",
+      "scene": "일상"
+    },
+    "156": {
+      "phrase": "きょうはいいてんきですね",
+      "romaji": "kyou wa ii tenki desu ne",
+      "korean": "쿄와 이 텐키데스네",
+      "meaning": "오늘은 좋은 날씨네요",
+      "scene": "일상"
+    },
+    "157": {
+      "phrase": "あめがふっています",
+      "romaji": "ame ga futte imasu",
+      "korean": "아메가 훗테이마스",
+      "meaning": "비가 오고 있습니다",
+      "scene": "일상"
+    },
+    "158": {
+      "phrase": "ゆきがふっています",
+      "romaji": "yuki ga futte imasu",
+      "korean": "유키가 훗테이마스",
+      "meaning": "눈이 오고 있습니다",
+      "scene": "일상"
+    },
+    "159": {
+      "phrase": "かぜがつよいです",
+      "romaji": "kaze ga tsuyoi desu",
+      "korean": "카제가 츠요이데스",
+      "meaning": "바람이 셉니다",
+      "scene": "일상"
+    },
+    "160": {
+      "phrase": "くもっています",
+      "romaji": "kumotte imasu",
+      "korean": "쿠뫃테이마스",
+      "meaning": "흐립니다",
+      "scene": "일상"
+    },
+    "161": {
+      "phrase": "はれています",
+      "romaji": "harete imasu",
+      "korean": "하레테이마스",
+      "meaning": "맑습니다",
+      "scene": "일상"
+    },
+    "162": {
+      "phrase": "かさをもっていますか",
+      "romaji": "kasa wo motte imasu ka",
+      "korean": "카사오 뫃테이마스카",
+      "meaning": "우산을 가지고 있습니까?",
+      "scene": "일상"
+    },
+    "163": {
+      "phrase": "からいりょうりありますか",
+      "romaji": "karai ryouri arimasu ka",
+      "korean": "카라이 료리 아리마스 카",
+      "meaning": "매운 음식 있어요?",
+      "scene": "식당·가게"
+    },
+    "164": {
+      "phrase": "もちかえりできますか",
+      "romaji": "mochikaeri dekimasu ka",
+      "korean": "모치카에리 데키마스 카",
+      "meaning": "테이크아웃(포장) 가능해요?",
+      "scene": "식당·가게"
+    },
+    "165": {
+      "phrase": "からしはべつでください",
+      "romaji": "karashi wa betsu de kudasai",
+      "korean": "카라시 와 베츠 데 쿠다사이",
+      "meaning": "고추냉이는 따로 주세요",
+      "scene": "식당·가게"
+    },
+    "166": {
+      "phrase": "ふくろにいれてもらえますか",
+      "romaji": "fukuro ni irete moraemasu ka",
+      "korean": "후쿠로 니 이레테 모라에마스 카",
+      "meaning": "봉투에 넣어주실 수 있나요?",
+      "scene": "식당·가게"
+    },
+    "167": {
+      "phrase": "さくらがきれいです",
+      "romaji": "sakura ga kirei desu",
+      "korean": "사쿠라가 키레이데스",
+      "meaning": "벚꽃이 예쁩니다",
+      "scene": "일상"
+    },
+    "168": {
+      "phrase": "もみじがきれいです",
+      "romaji": "momiji ga kirei desu",
+      "korean": "모미지가 키레이데스",
+      "meaning": "단풍이 예쁩니다",
+      "scene": "일상"
+    },
+    "169": {
+      "phrase": "なにをしていますか",
+      "romaji": "nani wo shite imasu ka",
+      "korean": "나니오 시테이마스카",
+      "meaning": "무엇을 하고 있습니까?",
+      "scene": "일상"
+    },
+    "170": {
+      "phrase": "べんきょうしています",
+      "romaji": "benkyou shite imasu",
+      "korean": "벤쿄시테이마스",
+      "meaning": "공부하고 있습니다",
+      "scene": "일상"
+    },
+    "171": {
+      "phrase": "しごとをしています",
+      "romaji": "shigoto wo shite imasu",
+      "korean": "시고토오 시테이마스",
+      "meaning": "일하고 있습니다",
+      "scene": "일상"
+    },
+    "172": {
+      "phrase": "やすんでいます",
+      "romaji": "yasunde imasu",
+      "korean": "야슨데이마스",
+      "meaning": "쉬고 있습니다",
+      "scene": "일상"
+    },
+    "173": {
+      "phrase": "テレビをみています",
+      "romaji": "terebi wo mite imasu",
+      "korean": "테레비오 미테이마스",
+      "meaning": "TV를 보고 있습니다",
+      "scene": "일상"
+    },
+    "174": {
+      "phrase": "りょうりをしています",
+      "romaji": "ryouri wo shite imasu",
+      "korean": "료리오 시테이마스",
+      "meaning": "요리하고 있습니다",
+      "scene": "일상"
+    },
+    "175": {
+      "phrase": "そうじをしています",
+      "romaji": "souji wo shite imasu",
+      "korean": "소지오 시테이마스",
+      "meaning": "청소하고 있습니다",
+      "scene": "일상"
+    },
+    "176": {
+      "phrase": "せんたくをしています",
+      "romaji": "sentaku wo shite imasu",
+      "korean": "센타쿠오 시테이마스",
+      "meaning": "빨래하고 있습니다",
+      "scene": "일상"
+    },
+    "177": {
+      "phrase": "かいものをしています",
+      "romaji": "kaimono wo shite imasu",
+      "korean": "카이모노오 시테이마스",
+      "meaning": "쇼핑하고 있습니다",
+      "scene": "식당·가게"
+    },
+    "178": {
+      "phrase": "さんぽをしています",
+      "romaji": "sanpo wo shite imasu",
+      "korean": "산포오 시테이마스",
+      "meaning": "산책하고 있습니다",
+      "scene": "일상"
+    },
+    "179": {
+      "phrase": "うんどうをしています",
+      "romaji": "undou wo shite imasu",
+      "korean": "운도오 시테이마스",
+      "meaning": "운동하고 있습니다",
+      "scene": "일상"
+    },
+    "180": {
+      "phrase": "ねています",
+      "romaji": "nete imasu",
+      "korean": "네테이마스",
+      "meaning": "자고 있습니다",
+      "scene": "일상"
+    },
+    "181": {
+      "phrase": "でんわばんごうをおしえてください",
+      "romaji": "denwa bangou wo oshiete kudasai",
+      "korean": "덴와방고오 오시에테쿠다사이",
+      "meaning": "전화번호를 가르쳐주세요",
+      "scene": "일상"
+    },
+    "182": {
+      "phrase": "メールアドレスをおしえてください",
+      "romaji": "meeru adoresu wo oshiete kudasai",
+      "korean": "메루 아도레스오 오시에테쿠다사이",
+      "meaning": "이메일 주소를 가르쳐주세요",
+      "scene": "일상"
+    },
+    "183": {
+      "phrase": "でんわをかけてもいいですか",
+      "romaji": "denwa wo kaketemo ii desu ka",
+      "korean": "덴와오 카케테모 이데스카",
+      "meaning": "전화해도 됩니까?",
+      "scene": "일상"
+    },
+    "184": {
+      "phrase": "もしもし",
+      "romaji": "moshimoshi",
+      "korean": "모시모시",
+      "meaning": "여보세요",
+      "scene": "일상"
+    },
+    "185": {
+      "phrase": "ミンスさんはいますか",
+      "romaji": "minsu san wa imasu ka",
+      "korean": "민수산와 이마스카",
+      "meaning": "민수씨 계십니까?",
+      "scene": "일상"
+    },
+    "186": {
+      "phrase": "しょうしょうおまちください",
+      "romaji": "shoushou omachi kudasai",
+      "korean": "쇼쇼 오마치쿠다사이",
+      "meaning": "잠시만 기다려주세요 (전화대기)",
+      "scene": "일상"
+    },
+    "187": {
+      "phrase": "あとでかけなおします",
+      "romaji": "ato de kake naoshimasu",
+      "korean": "아토데 카케 나오시마스",
+      "meaning": "나중에 다시 전화하겠습니다",
+      "scene": "일상"
+    },
+    "188": {
+      "phrase": "でんごんをおねがいします",
+      "romaji": "dengon wo onegaishimasu",
+      "korean": "덴곤오 오네가이시마스",
+      "meaning": "메시지를 부탁합니다",
+      "scene": "일상"
+    },
+    "189": {
+      "phrase": "またれんらくします",
+      "romaji": "mata renraku shimasu",
+      "korean": "마타 렌라쿠시마스",
+      "meaning": "다시 연락하겠습니다",
+      "scene": "일상"
+    },
+    "190": {
+      "phrase": "まちがえました",
+      "romaji": "machigaemashita",
+      "korean": "마치가에마시타",
+      "meaning": "잘못 걸었습니다 (잘못 건 전화)",
+      "scene": "일상"
+    },
+    "191": {
+      "phrase": "びょういんはどこですか",
+      "romaji": "byouin wa doko desu ka",
+      "korean": "뵤인와 도코데스카",
+      "meaning": "병원은 어디입니까?",
+      "scene": "병원·약국"
+    },
+    "192": {
+      "phrase": "ぐあいがわるいです",
+      "romaji": "guai ga warui desu",
+      "korean": "구아이가 와루이데스",
+      "meaning": "몸 상태가 나쁩니다",
+      "scene": "병원·약국"
+    },
+    "193": {
+      "phrase": "あたまがいたいです",
+      "romaji": "atama ga itai desu",
+      "korean": "아타마가 이타이데스",
+      "meaning": "머리가 아픕니다",
+      "scene": "병원·약국"
+    },
+    "194": {
+      "phrase": "おなかがいたいです",
+      "romaji": "onaka ga itai desu",
+      "korean": "오나카가 이타이데스",
+      "meaning": "배가 아픕니다",
+      "scene": "병원·약국"
+    },
+    "195": {
+      "phrase": "ねつがあります",
+      "romaji": "netsu ga arimasu",
+      "korean": "네츠가 아리마스",
+      "meaning": "열이 있습니다",
+      "scene": "병원·약국"
+    },
+    "196": {
+      "phrase": "せきがでます",
+      "romaji": "seki ga demasu",
+      "korean": "세키가 데마스",
+      "meaning": "기침이 납니다",
+      "scene": "병원·약국"
+    },
+    "197": {
+      "phrase": "かぜをひきました",
+      "romaji": "kaze wo hikimashita",
+      "korean": "카제오 히키마시타",
+      "meaning": "감기에 걸렸습니다",
+      "scene": "병원·약국"
+    },
+    "198": {
+      "phrase": "くすりをください",
+      "romaji": "kusuri wo kudasai",
+      "korean": "쿠스리오 쿠다사이",
+      "meaning": "약 주세요",
+      "scene": "병원·약국"
+    },
+    "199": {
+      "phrase": "いちにちなんかいのみますか",
+      "romaji": "ichinichi nankai nomimasu ka",
+      "korean": "이치니치 난카이 노미마스카",
+      "meaning": "하루에 몇 번 먹습니까?",
+      "scene": "병원·약국"
+    },
+    "200": {
+      "phrase": "しょくごにのんでください",
+      "romaji": "shokugo ni nonde kudasai",
+      "korean": "쇼쿠고니 논데쿠다사이",
+      "meaning": "식후에 드세요",
+      "scene": "병원·약국"
+    },
+    "201": {
+      "phrase": "けがをしました",
+      "romaji": "kega wo shimashita",
+      "korean": "케가오 시마시타",
+      "meaning": "다쳤습니다",
+      "scene": "병원·약국"
+    },
+    "202": {
+      "phrase": "きゅうきゅうしゃをよんでください",
+      "romaji": "kyuukyuusha wo yonde kudasai",
+      "korean": "큐큐샤오 욘데쿠다사이",
+      "meaning": "구급차를 불러주세요",
+      "scene": "병원·약국"
+    },
+    "203": {
+      "phrase": "たすけてください",
+      "romaji": "tasukete kudasai",
+      "korean": "타스케테쿠다사이",
+      "meaning": "도와주세요",
+      "scene": "일상"
+    },
+    "204": {
+      "phrase": "だいじょうぶですか",
+      "romaji": "daijoubu desu ka",
+      "korean": "다이죠부데스카",
+      "meaning": "괜찮습니까?",
+      "scene": "일상"
+    },
+    "205": {
+      "phrase": "しんぱいです",
+      "romaji": "shinpai desu",
+      "korean": "신파이데스",
+      "meaning": "걱정입니다",
+      "scene": "일상"
+    },
+    "206": {
+      "phrase": "あんしんしました",
+      "romaji": "anshin shimashita",
+      "korean": "안신시마시타",
+      "meaning": "안심했습니다",
+      "scene": "일상"
+    },
+    "207": {
+      "phrase": "こうえんにいきます",
+      "romaji": "kouen ni ikimasu",
+      "korean": "코엔니 이키마스",
+      "meaning": "공원에 갑니다",
+      "scene": "일상"
+    },
+    "208": {
+      "phrase": "としょかんにいきます",
+      "romaji": "toshokan ni ikimasu",
+      "korean": "토쇼칸니 이키마스",
+      "meaning": "도서관에 갑니다",
+      "scene": "일상"
+    },
+    "209": {
+      "phrase": "ぎんこうにいきます",
+      "romaji": "ginkou ni ikimasu",
+      "korean": "긴코니 이키마스",
+      "meaning": "은행에 갑니다",
+      "scene": "일상"
+    },
+    "210": {
+      "phrase": "ゆうびんきょくにいきます",
+      "romaji": "yuubinkyoku ni ikimasu",
+      "korean": "유빙쿄쿠니 이키마스",
+      "meaning": "우체국에 갑니다",
+      "scene": "일상"
+    },
+    "211": {
+      "phrase": "コンビニにいきます",
+      "romaji": "konbini ni ikimasu",
+      "korean": "콘비니니 이키마스",
+      "meaning": "편의점에 갑니다",
+      "scene": "일상"
+    },
+    "212": {
+      "phrase": "スーパーにいきます",
+      "romaji": "suupaa ni ikimasu",
+      "korean": "스파니 이키마스",
+      "meaning": "슈퍼마켓에 갑니다",
+      "scene": "일상"
+    },
+    "213": {
+      "phrase": "デパートにいきます",
+      "romaji": "depaato ni ikimasu",
+      "korean": "데파토니 이키마스",
+      "meaning": "백화점에 갑니다",
+      "scene": "일상"
+    },
+    "214": {
+      "phrase": "えいがかんにいきます",
+      "romaji": "eigakan ni ikimasu",
+      "korean": "에가칸니 이키마스",
+      "meaning": "영화관에 갑니다",
+      "scene": "일상"
+    },
+    "215": {
+      "phrase": "カフェにいきます",
+      "romaji": "kafe ni ikimasu",
+      "korean": "카페니 이키마스",
+      "meaning": "카페에 갑니다",
+      "scene": "일상"
+    },
+    "216": {
+      "phrase": "レストランにいきます",
+      "romaji": "resutoran ni ikimasu",
+      "korean": "레스토랑니 이키마스",
+      "meaning": "레스토랑에 갑니다",
+      "scene": "일상"
+    },
+    "217": {
+      "phrase": "いっしょにいきませんか",
+      "romaji": "issho ni ikimasen ka",
+      "korean": "잇쇼니 이키마센카",
+      "meaning": "같이 가지 않겠습니까?",
+      "scene": "일상"
+    },
+    "218": {
+      "phrase": "いいですよ",
+      "romaji": "ii desu yo",
+      "korean": "이이데스요",
+      "meaning": "좋아요",
+      "scene": "일상"
+    },
+    "219": {
+      "phrase": "ざんねんですが",
+      "romaji": "zannen desu ga",
+      "korean": "잔넨데스가",
+      "meaning": "유감스럽지만",
+      "scene": "일상"
+    },
+    "220": {
+      "phrase": "いそがしいです",
+      "romaji": "isogashii desu",
+      "korean": "이소가시데스",
+      "meaning": "바쁩니다",
+      "scene": "일상"
+    },
+    "221": {
+      "phrase": "ひまです",
+      "romaji": "hima desu",
+      "korean": "히마데스",
+      "meaning": "한가합니다",
+      "scene": "일상"
+    },
+    "222": {
+      "phrase": "やくそくがあります",
+      "romaji": "yakusoku ga arimasu",
+      "korean": "야쿠소쿠가 아리마스",
+      "meaning": "약속이 있습니다",
+      "scene": "일상"
+    },
+    "223": {
+      "phrase": "よていがあります",
+      "romaji": "yotei ga arimasu",
+      "korean": "요테이가 아리마스",
+      "meaning": "예정이 있습니다",
+      "scene": "일상"
+    },
+    "224": {
+      "phrase": "なんじにあいましょうか",
+      "romaji": "nanji ni aimashou ka",
+      "korean": "난지니 아이마쇼카",
+      "meaning": "몇 시에 만날까요?",
+      "scene": "일상"
+    },
+    "225": {
+      "phrase": "さんじにあいましょう",
+      "romaji": "sanji ni aimashou",
+      "korean": "산지니 아이마쇼",
+      "meaning": "3시에 만나요",
+      "scene": "일상"
+    },
+    "226": {
+      "phrase": "どこであいましょうか",
+      "romaji": "doko de aimashou ka",
+      "korean": "도코데 아이마쇼카",
+      "meaning": "어디서 만날까요?",
+      "scene": "일상"
+    },
+    "227": {
+      "phrase": "えきのまえであいましょう",
+      "romaji": "eki no mae de aimashou",
+      "korean": "에키노 마에데 아이마쇼",
+      "meaning": "역 앞에서 만나요",
+      "scene": "일상"
+    },
+    "228": {
+      "phrase": "おくれてすみません",
+      "romaji": "okurete sumimasen",
+      "korean": "오쿠레테 스미마센",
+      "meaning": "늦어서 죄송합니다",
+      "scene": "일상"
+    },
+    "229": {
+      "phrase": "ながくまちましたか",
+      "romaji": "nagaku machimashita ka",
+      "korean": "나가쿠 마치마시타카",
+      "meaning": "오래 기다렸습니까?",
+      "scene": "일상"
+    },
+    "230": {
+      "phrase": "いまついたところです",
+      "romaji": "ima tsuita tokoro desu",
+      "korean": "이마 츠이타 토코로데스",
+      "meaning": "지금 막 도착했습니다",
+      "scene": "일상"
+    },
+    "231": {
+      "phrase": "しゃしんをとってもいいですか",
+      "romaji": "shashin wo tottemo ii desu ka",
+      "korean": "샤신오 톳테모 이데스카",
+      "meaning": "사진을 찍어도 됩니까?",
+      "scene": "여행·교통"
+    },
+    "232": {
+      "phrase": "しょようじかんはどれくらいですか",
+      "romaji": "shoyoujikan wa dore kurai desu ka",
+      "korean": "쇼요지칸와 도레쿠라이 데스카",
+      "meaning": "소요시간이 얼마나 돼요?",
+      "scene": "여행·교통"
+    },
+    "233": {
+      "phrase": "もういちどおねがいします",
+      "romaji": "mou ichido onegaishimasu",
+      "korean": "모 이치도 오네가이시마스",
+      "meaning": "한 번 더 부탁합니다",
+      "scene": "일상"
+    },
+    "234": {
+      "phrase": "ゆっくりはなしてください",
+      "romaji": "yukkuri hanashite kudasai",
+      "korean": "윳쿠리 하나시테쿠다사이",
+      "meaning": "천천히 말해주세요",
+      "scene": "일상"
+    },
+    "235": {
+      "phrase": "にほんごがはなせません",
+      "romaji": "nihongo ga hanasemasen",
+      "korean": "니혼고가 하나세마센",
+      "meaning": "일본어를 못합니다",
+      "scene": "일상"
+    },
+    "236": {
+      "phrase": "えいごがはなせますか",
+      "romaji": "eigo ga hanasemasu ka",
+      "korean": "에고가 하나세마스카",
+      "meaning": "영어를 할 수 있습니까?",
+      "scene": "일상"
+    },
+    "237": {
+      "phrase": "すこしだけです",
+      "romaji": "sukoshi dake desu",
+      "korean": "스코시다케데스",
+      "meaning": "조금만 합니다 (능력표현)",
+      "scene": "일상"
+    },
+    "238": {
+      "phrase": "かいてください",
+      "romaji": "kaite kudasai",
+      "korean": "카이테쿠다사이",
+      "meaning": "써주세요",
+      "scene": "일상"
+    },
+    "239": {
+      "phrase": "これはなんとよみますか",
+      "romaji": "kore wa nan to yomimasu ka",
+      "korean": "코레와 난토 요미마스카",
+      "meaning": "이것은 어떻게 읽습니까?",
+      "scene": "일상"
+    },
+    "240": {
+      "phrase": "これはなんといういみですか",
+      "romaji": "kore wa nan to iu imi desu ka",
+      "korean": "코레와 난토이유 이미데스카",
+      "meaning": "이것은 무슨 뜻입니까?",
+      "scene": "일상"
+    },
+    "241": {
+      "phrase": "おてあらいはどこですか",
+      "romaji": "otearai wa doko desu ka",
+      "korean": "오테아라이와 도코데스카",
+      "meaning": "화장실은 어디입니까?",
+      "scene": "식당·가게"
+    },
+    "242": {
+      "phrase": "トイレをかしてください",
+      "romaji": "toire wo kashite kudasai",
+      "korean": "토이레오 카시테쿠다사이",
+      "meaning": "화장실 좀 빌려주세요",
+      "scene": "식당·가게"
+    },
+    "243": {
+      "phrase": "きんえんですか",
+      "romaji": "kinen desu ka",
+      "korean": "킨엔데스카",
+      "meaning": "금연입니까?",
+      "scene": "식당·가게"
+    },
+    "244": {
+      "phrase": "たばこをすってもいいですか",
+      "romaji": "tabako wo suttemo ii desu ka",
+      "korean": "타바코오 숫테모 이데스카",
+      "meaning": "담배를 피워도 됩니까?",
+      "scene": "식당·가게"
+    },
+    "245": {
+      "phrase": "ここにすわってもいいですか",
+      "romaji": "koko ni suwattemo ii desu ka",
+      "korean": "코코니 스왓테모 이데스카",
+      "meaning": "여기 앉아도 됩니까?",
+      "scene": "식당·가게"
+    },
+    "246": {
+      "phrase": "どうぞ",
+      "romaji": "douzo",
+      "korean": "도조",
+      "meaning": "어서/여기요",
+      "scene": "일상"
+    },
+    "247": {
+      "phrase": "おさきにどうぞ",
+      "romaji": "osaki ni douzo",
+      "korean": "오사키니 도조",
+      "meaning": "먼저 가세요",
+      "scene": "일상"
+    },
+    "248": {
+      "phrase": "おさきにしつれいします",
+      "romaji": "osaki ni shitsurei shimasu",
+      "korean": "오사키니 시츠레이시마스",
+      "meaning": "먼저 실례합니다",
+      "scene": "일상"
+    },
+    "249": {
+      "phrase": "きをつけて",
+      "romaji": "ki wo tsukete",
+      "korean": "키오 츠케테",
+      "meaning": "조심하세요",
+      "scene": "일상"
+    },
+    "250": {
+      "phrase": "いってらっしゃい",
+      "romaji": "itte rasshai",
+      "korean": "잇테랏샤이",
+      "meaning": "잘 다녀와요",
+      "scene": "일상"
+    },
+    "251": {
+      "phrase": "あかです",
+      "romaji": "aka desu",
+      "korean": "아카데스",
+      "meaning": "빨강입니다",
+      "scene": "일상"
+    },
+    "252": {
+      "phrase": "あおです",
+      "romaji": "ao desu",
+      "korean": "아오데스",
+      "meaning": "파랑입니다",
+      "scene": "일상"
+    },
+    "253": {
+      "phrase": "きいろです",
+      "romaji": "kiiro desu",
+      "korean": "키로데스",
+      "meaning": "노랑입니다",
+      "scene": "일상"
+    },
+    "254": {
+      "phrase": "しろです",
+      "romaji": "shiro desu",
+      "korean": "시로데스",
+      "meaning": "하양입니다",
+      "scene": "일상"
+    },
+    "255": {
+      "phrase": "くろです",
+      "romaji": "kuro desu",
+      "korean": "쿠로데스",
+      "meaning": "검정입니다",
+      "scene": "일상"
+    },
+    "256": {
+      "phrase": "みどりです",
+      "romaji": "midori desu",
+      "korean": "미도리데스",
+      "meaning": "초록입니다",
+      "scene": "일상"
+    },
+    "257": {
+      "phrase": "ピンクです",
+      "romaji": "pinku desu",
+      "korean": "핑쿠데스",
+      "meaning": "분홍입니다",
+      "scene": "일상"
+    },
+    "258": {
+      "phrase": "おおきいです",
+      "romaji": "ookii desu",
+      "korean": "오키데스",
+      "meaning": "큽니다",
+      "scene": "일상"
+    },
+    "259": {
+      "phrase": "ちいさいです",
+      "romaji": "chiisai desu",
+      "korean": "치사이데스",
+      "meaning": "작습니다",
+      "scene": "일상"
+    },
+    "260": {
+      "phrase": "ながいです",
+      "romaji": "nagai desu",
+      "korean": "나가이데스",
+      "meaning": "깁니다",
+      "scene": "일상"
+    },
+    "261": {
+      "phrase": "みじかいです",
+      "romaji": "mijikai desu",
+      "korean": "미지카이데스",
+      "meaning": "짧습니다",
+      "scene": "일상"
+    },
+    "262": {
+      "phrase": "ふといです",
+      "romaji": "futoi desu",
+      "korean": "후토이데스",
+      "meaning": "두껍습니다",
+      "scene": "일상"
+    },
+    "263": {
+      "phrase": "ほそいです",
+      "romaji": "hosoi desu",
+      "korean": "호소이데스",
+      "meaning": "얇습니다",
+      "scene": "일상"
+    },
+    "264": {
+      "phrase": "おもいです",
+      "romaji": "omoi desu",
+      "korean": "오모이데스",
+      "meaning": "무겁습니다",
+      "scene": "일상"
+    },
+    "265": {
+      "phrase": "かるいです",
+      "romaji": "karui desu",
+      "korean": "카루이데스",
+      "meaning": "가볍습니다",
+      "scene": "일상"
+    },
+    "266": {
+      "phrase": "あたらしいです",
+      "romaji": "atarashii desu",
+      "korean": "아타라시데스",
+      "meaning": "새롭습니다",
+      "scene": "일상"
+    },
+    "267": {
+      "phrase": "ふるいです",
+      "romaji": "furui desu",
+      "korean": "후루이데스",
+      "meaning": "오래되었습니다",
+      "scene": "일상"
+    },
+    "268": {
+      "phrase": "いいです",
+      "romaji": "ii desu",
+      "korean": "이데스",
+      "meaning": "좋습니다",
+      "scene": "일상"
+    },
+    "269": {
+      "phrase": "わるいです",
+      "romaji": "warui desu",
+      "korean": "와루이데스",
+      "meaning": "나쁩니다",
+      "scene": "일상"
+    },
+    "270": {
+      "phrase": "すてきです",
+      "romaji": "suteki desu",
+      "korean": "스테키데스",
+      "meaning": "멋집니다",
+      "scene": "일상"
+    },
+    "271": {
+      "phrase": "かわいいです",
+      "romaji": "kawaii desu",
+      "korean": "카와이데스",
+      "meaning": "귀엽습니다",
+      "scene": "일상"
+    },
+    "272": {
+      "phrase": "かっこいいです",
+      "romaji": "kakkoii desu",
+      "korean": "칵코이데스",
+      "meaning": "멋있습니다",
+      "scene": "일상"
+    },
+    "273": {
+      "phrase": "べんりです",
+      "romaji": "benri desu",
+      "korean": "벤리데스",
+      "meaning": "편리합니다",
+      "scene": "일상"
+    },
+    "274": {
+      "phrase": "ふべんです",
+      "romaji": "fuben desu",
+      "korean": "후벤데스",
+      "meaning": "불편합니다",
+      "scene": "일상"
+    },
+    "275": {
+      "phrase": "しずかです",
+      "romaji": "shizuka desu",
+      "korean": "시즈카데스",
+      "meaning": "조용합니다",
+      "scene": "일상"
+    },
+    "276": {
+      "phrase": "にぎやかです",
+      "romaji": "nigiyaka desu",
+      "korean": "니기야카데스",
+      "meaning": "시끄럽습니다/활기찹니다",
+      "scene": "일상"
+    },
+    "277": {
+      "phrase": "ゆうめいです",
+      "romaji": "yuumei desu",
+      "korean": "유메이데스",
+      "meaning": "유명합니다",
+      "scene": "일상"
+    },
+    "278": {
+      "phrase": "あんぜんです",
+      "romaji": "anzen desu",
+      "korean": "안젠데스",
+      "meaning": "안전합니다",
+      "scene": "일상"
+    },
+    "279": {
+      "phrase": "きけんです",
+      "romaji": "kiken desu",
+      "korean": "키켄데스",
+      "meaning": "위험합니다",
+      "scene": "일상"
+    },
+    "280": {
+      "phrase": "たいへんです",
+      "romaji": "taihen desu",
+      "korean": "타이헨데스",
+      "meaning": "힘듭니다",
+      "scene": "일상"
+    },
+    "281": {
+      "phrase": "かんたんです",
+      "romaji": "kantan desu",
+      "korean": "칸탄데스",
+      "meaning": "간단합니다",
+      "scene": "일상"
+    },
+    "282": {
+      "phrase": "ふくざつです",
+      "romaji": "fukuzatsu desu",
+      "korean": "후쿠자츠데스",
+      "meaning": "복잡합니다",
+      "scene": "일상"
+    },
+    "283": {
+      "phrase": "サッカーがすきです",
+      "romaji": "sakkaa ga suki desu",
+      "korean": "삿카가 스키데스",
+      "meaning": "축구를 좋아합니다",
+      "scene": "일상"
+    },
+    "284": {
+      "phrase": "やきゅうがすきです",
+      "romaji": "yakyuu ga suki desu",
+      "korean": "야큐가 스키데스",
+      "meaning": "야구를 좋아합니다",
+      "scene": "일상"
+    },
+    "285": {
+      "phrase": "バスケがすきです",
+      "romaji": "basuke ga suki desu",
+      "korean": "바스케가 스키데스",
+      "meaning": "농구를 좋아합니다",
+      "scene": "일상"
+    },
+    "286": {
+      "phrase": "テニスがすきです",
+      "romaji": "tenisu ga suki desu",
+      "korean": "테니스가 스키데스",
+      "meaning": "테니스를 좋아합니다",
+      "scene": "일상"
+    },
+    "287": {
+      "phrase": "およぎます",
+      "romaji": "oyogimasu",
+      "korean": "오요기마스",
+      "meaning": "수영합니다",
+      "scene": "일상"
+    },
+    "288": {
+      "phrase": "はしります",
+      "romaji": "hashirimasu",
+      "korean": "하시리마스",
+      "meaning": "달립니다",
+      "scene": "일상"
+    },
+    "289": {
+      "phrase": "あるきます",
+      "romaji": "arukimasu",
+      "korean": "아루키마스",
+      "meaning": "걷습니다",
+      "scene": "일상"
+    },
+    "290": {
+      "phrase": "ヨガをします",
+      "romaji": "yoga wo shimasu",
+      "korean": "요가오 시마스",
+      "meaning": "요가를 합니다",
+      "scene": "일상"
+    },
+    "291": {
+      "phrase": "ジムにいきます",
+      "romaji": "jimu ni ikimasu",
+      "korean": "짐니 이키마스",
+      "meaning": "헬스장에 갑니다",
+      "scene": "일상"
+    },
+    "292": {
+      "phrase": "アニメがすきです",
+      "romaji": "anime ga suki desu",
+      "korean": "아니메가 스키데스",
+      "meaning": "애니메이션을 좋아합니다",
+      "scene": "일상"
+    },
+    "293": {
+      "phrase": "マンガをよみます",
+      "romaji": "manga wo yomimasu",
+      "korean": "만가오 요미마스",
+      "meaning": "만화를 읽습니다",
+      "scene": "일상"
+    },
+    "294": {
+      "phrase": "ゲームをします",
+      "romaji": "geemu wo shimasu",
+      "korean": "게무오 시마스",
+      "meaning": "게임을 합니다",
+      "scene": "일상"
+    },
+    "295": {
+      "phrase": "えをかきます",
+      "romaji": "e wo kakimasu",
+      "korean": "에오 카키마스",
+      "meaning": "그림을 그립니다",
+      "scene": "일상"
+    },
+    "296": {
+      "phrase": "しゃしんをとります",
+      "romaji": "shashin wo torimasu",
+      "korean": "샤신오 토리마스",
+      "meaning": "사진을 찍습니다",
+      "scene": "일상"
+    },
+    "297": {
+      "phrase": "ギターをひきます",
+      "romaji": "gitaa wo hikimasu",
+      "korean": "기타오 히키마스",
+      "meaning": "기타를 칩니다",
+      "scene": "일상"
+    },
+    "298": {
+      "phrase": "ピアノをひきます",
+      "romaji": "piano wo hikimasu",
+      "korean": "피아노오 히키마스",
+      "meaning": "피아노를 칩니다",
+      "scene": "일상"
+    },
+    "299": {
+      "phrase": "うたをうたいます",
+      "romaji": "uta wo utaimasu",
+      "korean": "우타오 우타이마스",
+      "meaning": "노래를 부릅니다",
+      "scene": "일상"
+    },
+    "300": {
+      "phrase": "カラオケにいきます",
+      "romaji": "karaoke ni ikimasu",
+      "korean": "카라오케니 이키마스",
+      "meaning": "노래방에 갑니다",
+      "scene": "일상"
+    },
+    "301": {
+      "phrase": "おさけをのみます",
+      "romaji": "osake wo nomimasu",
+      "korean": "오사케오 노미마스",
+      "meaning": "술을 마십니다",
+      "scene": "일상"
+    },
+    "302": {
+      "phrase": "おちゃをのみます",
+      "romaji": "ocha wo nomimasu",
+      "korean": "오차오 노미마스",
+      "meaning": "차를 마십니다",
+      "scene": "일상"
+    },
+    "303": {
+      "phrase": "ジュースをのみます",
+      "romaji": "juusu wo nomimasu",
+      "korean": "주스오 노미마스",
+      "meaning": "주스를 마십니다",
+      "scene": "일상"
+    },
+    "304": {
+      "phrase": "パンをたべます",
+      "romaji": "pan wo tabemasu",
+      "korean": "팡오 타베마스",
+      "meaning": "빵을 먹습니다",
+      "scene": "일상"
+    },
+    "305": {
+      "phrase": "ごはんをたべます",
+      "romaji": "gohan wo tabemasu",
+      "korean": "고항오 타베마스",
+      "meaning": "밥을 먹습니다",
+      "scene": "일상"
+    },
+    "306": {
+      "phrase": "にくがすきです",
+      "romaji": "niku ga suki desu",
+      "korean": "니쿠가 스키데스",
+      "meaning": "고기를 좋아합니다",
+      "scene": "일상"
+    },
+    "307": {
+      "phrase": "さかながすきです",
+      "romaji": "sakana ga suki desu",
+      "korean": "사카나가 스키데스",
+      "meaning": "생선을 좋아합니다",
+      "scene": "일상"
+    },
+    "308": {
+      "phrase": "やさいがすきです",
+      "romaji": "yasai ga suki desu",
+      "korean": "야사이가 스키데스",
+      "meaning": "채소를 좋아합니다",
+      "scene": "일상"
+    },
+    "309": {
+      "phrase": "くだものがすきです",
+      "romaji": "kudamono ga suki desu",
+      "korean": "쿠다모노가 스키데스",
+      "meaning": "과일을 좋아합니다",
+      "scene": "일상"
+    },
+    "310": {
+      "phrase": "たまごをたべます",
+      "romaji": "tamago wo tabemasu",
+      "korean": "타마고오 타베마스",
+      "meaning": "계란을 먹습니다",
+      "scene": "일상"
+    },
+    "311": {
+      "phrase": "ぎゅうにゅうをのみます",
+      "romaji": "gyuunyuu wo nomimasu",
+      "korean": "규뉴오 노미마스",
+      "meaning": "우유를 마십니다",
+      "scene": "일상"
+    },
+    "312": {
+      "phrase": "チーズがすきです",
+      "romaji": "chiizu ga suki desu",
+      "korean": "치즈가 스키데스",
+      "meaning": "치즈를 좋아합니다",
+      "scene": "일상"
+    },
+    "313": {
+      "phrase": "アイスクリームがすきです",
+      "romaji": "aisukuriimu ga suki desu",
+      "korean": "아이스크리무가 스키데스",
+      "meaning": "아이스크림을 좋아합니다",
+      "scene": "일상"
+    },
+    "314": {
+      "phrase": "ケーキがすきです",
+      "romaji": "keeki ga suki desu",
+      "korean": "케키가 스키데스",
+      "meaning": "케이크를 좋아합니다",
+      "scene": "일상"
+    },
+    "315": {
+      "phrase": "チョコレートがすきです",
+      "romaji": "chokoreeto ga suki desu",
+      "korean": "초코레토가 스키데스",
+      "meaning": "초콜릿을 좋아합니다",
+      "scene": "일상"
+    },
+    "316": {
+      "phrase": "あさはなにをたべますか",
+      "romaji": "asa wa nani wo tabemasu ka",
+      "korean": "아사와 나니오 타베마스카",
+      "meaning": "아침에 무엇을 먹습니까?",
+      "scene": "일상"
+    },
+    "317": {
+      "phrase": "ひるごはんはなにをたべますか",
+      "romaji": "hirugohan wa nani wo tabemasu ka",
+      "korean": "히루고항와 나니오 타베마스카",
+      "meaning": "점심은 무엇을 먹습니까?",
+      "scene": "일상"
+    },
+    "318": {
+      "phrase": "ばんごはんはなにをたべますか",
+      "romaji": "bangohan wa nani wo tabemasu ka",
+      "korean": "방고항와 나니오 타베마스카",
+      "meaning": "저녁은 무엇을 먹습니까?",
+      "scene": "일상"
+    },
+    "319": {
+      "phrase": "いまなにをかんがえていますか",
+      "romaji": "ima nani wo kangaete imasu ka",
+      "korean": "이마 나니오 칸가에테이마스카",
+      "meaning": "지금 무엇을 생각하고 있습니까?",
+      "scene": "일상"
+    },
+    "320": {
+      "phrase": "どうおもいますか",
+      "romaji": "dou omoimasu ka",
+      "korean": "도 오모이마스카",
+      "meaning": "어떻게 생각합니까?",
+      "scene": "일상"
+    },
+    "321": {
+      "phrase": "わたしもそうおもいます",
+      "romaji": "watashi mo sou omoimasu",
+      "korean": "와타시모 소 오모이마스",
+      "meaning": "저도 그렇게 생각합니다 (찬성)",
+      "scene": "일상"
+    },
+    "322": {
+      "phrase": "それはちがいます",
+      "romaji": "sore wa chigaimasu",
+      "korean": "소레와 치가이마스",
+      "meaning": "그것은 다릅니다 (반대)",
+      "scene": "일상"
+    },
+    "323": {
+      "phrase": "かもしれません",
+      "romaji": "kamoshiremasen",
+      "korean": "카모시레마센",
+      "meaning": "~일지도 모릅니다",
+      "scene": "일상"
+    },
+    "324": {
+      "phrase": "たぶん",
+      "romaji": "tabun",
+      "korean": "타분",
+      "meaning": "아마도",
+      "scene": "일상"
+    },
+    "325": {
+      "phrase": "きっと",
+      "romaji": "kitto",
+      "korean": "킷토",
+      "meaning": "반드시/틀림없이",
+      "scene": "일상"
+    },
+    "326": {
+      "phrase": "ぜったいに",
+      "romaji": "zettai ni",
+      "korean": "젯타이니",
+      "meaning": "절대로",
+      "scene": "일상"
+    },
+    "327": {
+      "phrase": "ほんとうですか",
+      "romaji": "hontou desu ka",
+      "korean": "혼토데스카",
+      "meaning": "정말입니까?",
+      "scene": "일상"
+    },
+    "328": {
+      "phrase": "うそです",
+      "romaji": "uso desu",
+      "korean": "우소데스",
+      "meaning": "거짓말입니다",
+      "scene": "일상"
+    },
+    "329": {
+      "phrase": "しんじられません",
+      "romaji": "shinjiraemasen",
+      "korean": "신지라에마센",
+      "meaning": "믿을 수 없습니다",
+      "scene": "일상"
+    },
+    "330": {
+      "phrase": "びっくりしました",
+      "romaji": "bikkuri shimashita",
+      "korean": "빗쿠리시마시타",
+      "meaning": "놀랐습니다",
+      "scene": "일상"
+    },
+    "331": {
+      "phrase": "すごいですね",
+      "romaji": "sugoi desu ne",
+      "korean": "스고이데스네",
+      "meaning": "대단하네요",
+      "scene": "일상"
+    },
+    "332": {
+      "phrase": "さいこうです",
+      "romaji": "saikou desu",
+      "korean": "사이코데스",
+      "meaning": "최고입니다",
+      "scene": "일상"
+    },
+    "333": {
+      "phrase": "さいあくです",
+      "romaji": "saiaku desu",
+      "korean": "사이아쿠데스",
+      "meaning": "최악입니다",
+      "scene": "일상"
+    },
+    "334": {
+      "phrase": "ちょっとまってください",
+      "romaji": "chotto matte kudasai",
+      "korean": "촛토 맛테쿠다사이",
+      "meaning": "잠깐만 기다려주세요",
+      "scene": "일상"
+    },
+    "335": {
+      "phrase": "いそいでください",
+      "romaji": "isoide kudasai",
+      "korean": "이소이데쿠다사이",
+      "meaning": "서둘러주세요",
+      "scene": "일상"
+    },
+    "336": {
+      "phrase": "ゆっくりしてください",
+      "romaji": "yukkuri shite kudasai",
+      "korean": "윳쿠리시테쿠다사이",
+      "meaning": "천천히 하세요",
+      "scene": "일상"
+    },
+    "337": {
+      "phrase": "がんばります",
+      "romaji": "ganbarimasu",
+      "korean": "간바리마스",
+      "meaning": "열심히 하겠습니다",
+      "scene": "일상"
+    },
+    "338": {
+      "phrase": "あきらめません",
+      "romaji": "akiramemasen",
+      "korean": "아키라메마센",
+      "meaning": "포기하지 않습니다",
+      "scene": "일상"
+    },
+    "339": {
+      "phrase": "できます",
+      "romaji": "dekimasu",
+      "korean": "데키마스",
+      "meaning": "할 수 있습니다",
+      "scene": "일상"
+    },
+    "340": {
+      "phrase": "できません",
+      "romaji": "dekimasen",
+      "korean": "데키마센",
+      "meaning": "할 수 없습니다",
+      "scene": "일상"
+    },
+    "341": {
+      "phrase": "やってみます",
+      "romaji": "yatte mimasu",
+      "korean": "얏테미마스",
+      "meaning": "해보겠습니다",
+      "scene": "일상"
+    },
+    "342": {
+      "phrase": "がんばってみます",
+      "romaji": "ganbatte mimasu",
+      "korean": "간밧테미마스",
+      "meaning": "힘내서 해보겠습니다",
+      "scene": "일상"
+    },
+    "343": {
+      "phrase": "しりません",
+      "romaji": "shirimasen",
+      "korean": "시리마센",
+      "meaning": "모릅니다",
+      "scene": "일상"
+    },
+    "344": {
+      "phrase": "しっています",
+      "romaji": "shitte imasu",
+      "korean": "싯테이마스",
+      "meaning": "알고 있습니다",
+      "scene": "일상"
+    },
+    "345": {
+      "phrase": "わすれました",
+      "romaji": "wasuremashita",
+      "korean": "와스레마시타",
+      "meaning": "잊어버렸습니다",
+      "scene": "일상"
+    },
+    "346": {
+      "phrase": "おもいだしました",
+      "romaji": "omoidashimashita",
+      "korean": "오모이다시마시타",
+      "meaning": "기억났습니다",
+      "scene": "일상"
+    },
+    "347": {
+      "phrase": "おぼえています",
+      "romaji": "oboete imasu",
+      "korean": "오보에테이마스",
+      "meaning": "기억하고 있습니다",
+      "scene": "일상"
+    },
+    "348": {
+      "phrase": "れんしゅうします",
+      "romaji": "renshuu shimasu",
+      "korean": "렌슈시마스",
+      "meaning": "연습합니다",
+      "scene": "일상"
+    },
+    "349": {
+      "phrase": "ふくしゅうします",
+      "romaji": "fukushuu shimasu",
+      "korean": "후쿠슈시마스",
+      "meaning": "복습합니다",
+      "scene": "일상"
+    },
+    "350": {
+      "phrase": "よしゅうします",
+      "romaji": "yoshuu shimasu",
+      "korean": "요슈시마스",
+      "meaning": "예습합니다",
+      "scene": "일상"
+    },
+    "351": {
+      "phrase": "しけんがあります",
+      "romaji": "shiken ga arimasu",
+      "korean": "시켄가 아리마스",
+      "meaning": "시험이 있습니다",
+      "scene": "일상"
+    },
+    "352": {
+      "phrase": "ごうかくしました",
+      "romaji": "goukaku shimashita",
+      "korean": "고카쿠시마시타",
+      "meaning": "합격했습니다",
+      "scene": "일상"
+    },
+    "353": {
+      "phrase": "ふごうかくでした",
+      "romaji": "fugoukaku deshita",
+      "korean": "후고카쿠데시타",
+      "meaning": "불합격이었습니다",
+      "scene": "일상"
+    },
+    "354": {
+      "phrase": "しゅくだいがあります",
+      "romaji": "shukudai ga arimasu",
+      "korean": "슈쿠다이가 아리마스",
+      "meaning": "숙제가 있습니다",
+      "scene": "일상"
+    },
+    "355": {
+      "phrase": "レポートをだします",
+      "romaji": "repooto wo dashimasu",
+      "korean": "레포토오 다시마스",
+      "meaning": "보고서를 제출합니다",
+      "scene": "일상"
+    },
+    "356": {
+      "phrase": "じゅぎょうがあります",
+      "romaji": "jugyou ga arimasu",
+      "korean": "쥬교가 아리마스",
+      "meaning": "수업이 있습니다",
+      "scene": "일상"
+    },
+    "357": {
+      "phrase": "きょうかしょをよみます",
+      "romaji": "kyoukasho wo yomimasu",
+      "korean": "쿄카쇼오 요미마스",
+      "meaning": "교과서를 읽습니다",
+      "scene": "일상"
+    },
+    "358": {
+      "phrase": "ノートをとります",
+      "romaji": "nooto wo torimasu",
+      "korean": "노토오 토리마스",
+      "meaning": "노트를 필기합니다",
+      "scene": "일상"
+    },
+    "359": {
+      "phrase": "しつもんがあります",
+      "romaji": "shitsumon ga arimasu",
+      "korean": "시츠몽가 아리마스",
+      "meaning": "질문이 있습니다",
+      "scene": "일상"
+    },
+    "360": {
+      "phrase": "おしえてください",
+      "romaji": "oshiete kudasai",
+      "korean": "오시에테쿠다사이",
+      "meaning": "가르쳐주세요",
+      "scene": "일상"
+    },
+    "361": {
+      "phrase": "せつめいしてください",
+      "romaji": "setsumei shite kudasai",
+      "korean": "세츠메이시테쿠다사이",
+      "meaning": "설명해주세요",
+      "scene": "일상"
+    },
+    "362": {
+      "phrase": "てつだってください",
+      "romaji": "tetsudatte kudasai",
+      "korean": "테츠닷테쿠다사이",
+      "meaning": "도와주세요",
+      "scene": "일상"
+    },
+    "363": {
+      "phrase": "かしてください",
+      "romaji": "kashite kudasai",
+      "korean": "카시테쿠다사이",
+      "meaning": "빌려주세요",
+      "scene": "일상"
+    },
+    "364": {
+      "phrase": "ありがとうございました",
+      "romaji": "arigatou gozaimashita",
+      "korean": "아리가토 고자이마시타",
+      "meaning": "감사했습니다",
+      "scene": "일상"
+    },
+    "365": {
+      "phrase": "いちねんかんありがとうございました",
+      "romaji": "ichinenkan arigatou gozaimashita",
+      "korean": "이치넨칸 아리가토 고자이마시타",
+      "meaning": "1년간 감사했습니다",
+      "scene": "일상"
+    },
+    "366": {
+      "phrase": "こころがいたいです",
+      "romaji": "kokoro ga itai desu",
+      "korean": "코코로가 이타이데스",
+      "meaning": "마음이 아픕니다 (스트레스)",
+      "scene": "병원·약국"
+    },
+    "367": {
+      "phrase": "きのうからいたいです",
+      "romaji": "kinou kara itai desu",
+      "korean": "키노우카라 이타이데스",
+      "meaning": "어제부터 아팠습니다",
+      "scene": "병원·약국"
+    },
+    "368": {
+      "phrase": "さんにちまえからいたいです",
+      "romaji": "sannichi mae kara itai desu",
+      "korean": "산니치 마에카라 이타이데스",
+      "meaning": "3일 전부터 아팠습니다",
+      "scene": "병원·약국"
+    },
+    "369": {
+      "phrase": "ここがいたいです",
+      "romaji": "koko ga itai desu",
+      "korean": "코코가 이타이데스",
+      "meaning": "여기가 아픕니다",
+      "scene": "병원·약국"
+    },
+    "370": {
+      "phrase": "よやくをしています",
+      "romaji": "yoyaku wo shite imasu",
+      "korean": "요야쿠오 시테이마스",
+      "meaning": "예약했습니다",
+      "scene": "식당·가게"
+    },
+    "371": {
+      "phrase": "おなまえをおねがいします",
+      "romaji": "onamae wo onegai shimasu",
+      "korean": "오나마에오 오네가이시마스",
+      "meaning": "성함을 알려주세요",
+      "scene": "일상"
+    },
+    "372": {
+      "phrase": "みをとります",
+      "romaji": "me wo torimasu",
+      "korean": "메오 토리마스",
+      "meaning": "눈 검사를 하겠습니다",
+      "scene": "병원·약국"
+    },
+    "373": {
+      "phrase": "このくすりをのんでいます",
+      "romaji": "kono kusuri wo nonde imasu",
+      "korean": "코노 쿠스리오 논데이마스",
+      "meaning": "이 약을 먹고 있습니다",
+      "scene": "병원·약국"
+    },
+    "374": {
+      "phrase": "まいにちくすりをのんでいます",
+      "romaji": "mainichi kusuri wo nonde imasu",
+      "korean": "마이니치 쿠스리오 논데이마스",
+      "meaning": "매일 약을 먹고 있습니다",
+      "scene": "병원·약국"
+    },
+    "375": {
+      "phrase": "くすりのなまえがわかりません",
+      "romaji": "kusuri no namae ga wakarimasen",
+      "korean": "쿠스리노 나마에가 와카리마센",
+      "meaning": "약 이름이 모르겠습니다",
+      "scene": "병원・약국"
+    },
+    "376": {
+      "phrase": "いまみてもらえますか",
+      "romaji": "ima mitte moraemasu ka",
+      "korean": "이마 미떼 모라에마스카",
+      "meaning": "지금 바로 봐주실 수 있나요?",
+      "scene": "병원·약국"
+    },
+    "377": {
+      "phrase": "パスポートをみせてください",
+      "romaji": "pasupooto wo misete kudasai",
+      "korean": "파스포토오 미세테 쿠다사이",
+      "meaning": "여권을 보여주세요",
+      "scene": "여행·교통"
+    },
+    "378": {
+      "phrase": "しんりょうひはいくらですか",
+      "romaji": "shinryouhi wa ikura desu ka",
+      "korean": "신료히와 이쿠라 데스카",
+      "meaning": "진료비는 얼마입니까?",
+      "scene": "병원·약국"
+    },
+    "379": {
+      "phrase": "やっきょくはどこですか",
+      "romaji": "yakkyoku wa doko desu ka",
+      "korean": "야꺄쿠와 도코데스카",
+      "meaning": "약국은 어디입니까?",
+      "scene": "병원·약국"
+    },
+    "380": {
+      "phrase": "じょざいをおくすりです",
+      "romaji": "jozai wo kusuri desu",
+      "korean": "조자이오 쿠스리 데스",
+      "meaning": "알약입니다",
+      "scene": "병원·약국"
+    },
+    "381": {
+      "phrase": "げねつざいをおくれ",
+      "romaji": "genetsuzai wo kudasai",
+      "korean": "게네츠자이오 쿠다사이",
+      "meaning": "해열제를 주세요",
+      "scene": "병원·약국"
+    },
+    "382": {
+      "phrase": "ちんつうざいをおくれ",
+      "romaji": "chintsuzai wo kudasai",
+      "korean": "친츠자이오 쿠다사이",
+      "meaning": "진통제를 주세요",
+      "scene": "병원·약국"
+    },
+    "383": {
+      "phrase": "うがいぐすりをください",
+      "romaji": "ugai gusuri wo kudasai",
+      "korean": "우가이 구스리오 쿠다사이",
+      "meaning": "목구멍 약 주세요",
+      "scene": "병원·약국"
+    },
+    "384": {
+      "phrase": "つらいです",
+      "romaji": "tsurai desu",
+      "korean": "츠라이데스",
+      "meaning": "힘들어요 (아파요)",
+      "scene": "병원·약국"
+    },
+    "385": {
+      "phrase": "いしゃをよんでください",
+      "romaji": "isha wo yonde kudasai",
+      "korean": "이샤오 욘데쿠다사이",
+      "meaning": "의사를 불러주세요",
+      "scene": "병원·약국"
+    },
+    "386": {
+      "phrase": "わたしはかんこくじんです",
+      "romaji": "watashi wa kankokujin desu",
+      "korean": "와타시 와 칸코쿠진 데스",
+      "meaning": "저는 한국 사람입니다",
+      "scene": "일상"
+    },
+    "387": {
+      "phrase": "にほんごがすこしはなせます",
+      "romaji": "nihongo ga sukoshi hanasemasu",
+      "korean": "니혼고 가 스코시 하나세마스",
+      "meaning": "일본어를 조금 할 수 있어요",
+      "scene": "일상"
+    },
+    "388": {
+      "phrase": "よやくのへんこうをおねがいします",
+      "romaji": "yoyaku no henko wo onegaishimasu",
+      "korean": "요야쿠 노 헨코 오 오네가이시마스",
+      "meaning": "예약 변경 부탁드립니다",
+      "scene": "여행·교통"
+    },
+    "389": {
+      "phrase": "バスはいつきますか",
+      "romaji": "basu wa itsu kimasu ka",
+      "korean": "바스 와 이쓰 키마스 카",
+      "meaning": "버스는 언제 오나요?",
+      "scene": "여행·교통"
+    },
+    "390": {
+      "phrase": "おつりください",
+      "romaji": "otsuri kudasai",
+      "korean": "오쓰리 쿠다사이",
+      "meaning": "거스름돈 주세요",
+      "scene": "식당·가게"
+    },
+    "391": {
+      "phrase": "きょうはやすみです",
+      "romaji": "kyou wa yasumi desu",
+      "korean": "쿄우 와 야스미 데스",
+      "meaning": "오늘은 휴일입니다",
+      "scene": "일상"
+    },
+    "392": {
+      "phrase": "かゆいです",
+      "romaji": "kayui desu",
+      "korean": "카유이 데스",
+      "meaning": "가려워요",
+      "scene": "병원·약국"
+    },
+    "393": {
+      "phrase": "きょうのてんきはどうですか",
+      "romaji": "kyou no tenki wa dou desu ka",
+      "korean": "쿄 노 텐키 와 도 데스 카",
+      "meaning": "오늘 날씨는 어때요?",
+      "scene": "일상"
+    },
+    "394": {
+      "phrase": "はをみがきま",
+      "romaji": "ha o migakimasu",
+      "korean": "하 오 미가키마스",
+      "meaning": "이를 닦아요",
+      "scene": "일상"
+    },
+    "395": {
+      "phrase": "あしたのよていはなんですか",
+      "romaji": "ashita no yotei wa nan desu ka",
+      "korean": "아시타 노 요테이 와 난 데스 카",
+      "meaning": "내일 일정은 뭐예요?",
+      "scene": "일상"
+    },
+    "396": {
+      "phrase": "そうですか",
+      "romaji": "sou desu ka",
+      "korean": "소데스카",
+      "meaning": "그렇군요",
+      "scene": "일상"
+    },
+    "397": {
+      "phrase": "そうですね",
+      "romaji": "sou desu ne",
+      "korean": "소데스네",
+      "meaning": "그렇네요",
+      "scene": "일상"
+    },
+    "398": {
+      "phrase": "もちろんです",
+      "romaji": "mochiron desu",
+      "korean": "모치론데스",
+      "meaning": "물론입니다",
+      "scene": "일상"
+    },
+    "399": {
+      "phrase": "もうすこしください",
+      "romaji": "mou sukoshi kudasai",
+      "korean": "모 스코시 쿠다사이",
+      "meaning": "조금만 더 주세요",
+      "scene": "일상"
+    },
+    "400": {
+      "phrase": "ぜひいきたいです",
+      "romaji": "zehi ikitai desu",
+      "korean": "제히 이키타이데스",
+      "meaning": "꼭 가고 싶습니다",
+      "scene": "일상"
+    },
+    "401": {
+      "phrase": "なんでもありません",
+      "romaji": "nan demo arimasen",
+      "korean": "난데모 아리마센",
+      "meaning": "아무것도 아닙니다",
+      "scene": "일상"
+    },
+    "402": {
+      "phrase": "きをつけてかえってください",
+      "romaji": "ki wo tsukete kaette kudasai",
+      "korean": "키오 츠케테 카엣테쿠다사이",
+      "meaning": "조심히 들어가세요",
+      "scene": "일상"
+    },
+    "403": {
+      "phrase": "またきてください",
+      "romaji": "mata kite kudasai",
+      "korean": "마타 키테쿠다사이",
+      "meaning": "또 오세요",
+      "scene": "일상"
+    },
+    "404": {
+      "phrase": "きぶんがわるいです",
+      "romaji": "kibun ga warui desu",
+      "korean": "키분가 와루이데스",
+      "meaning": "기분이 나쁩니다",
+      "scene": "일상"
+    },
+    "405": {
+      "phrase": "はきけがします",
+      "romaji": "hakike ga shimasu",
+      "korean": "하키케가 시마스",
+      "meaning": "속이 메스껍습니다",
+      "scene": "병원·약국"
+    },
+    "406": {
+      "phrase": "いらっしゃいませ",
+      "romaji": "irasshaimase",
+      "korean": "이라샤이마세",
+      "meaning": "어서 오세요 (가게)",
+      "scene": "식당·가게"
+    },
+    "407": {
+      "phrase": "ちんつうざいをください",
+      "romaji": "chintsuuzai wo kudasai",
+      "korean": "친츠자이오 쿠다사이",
+      "meaning": "진통제 주세요",
+      "scene": "병원·약국"
+    },
+    "408": {
+      "phrase": "しあわせです",
+      "romaji": "shiawase desu",
+      "korean": "시아와세데스",
+      "meaning": "행복합니다",
+      "scene": "일상"
+    },
+    "409": {
+      "phrase": "かなしいきもちです",
+      "romaji": "kanashii kimochi desu",
+      "korean": "카나시 키모치데스",
+      "meaning": "슬픈 기분입니다",
+      "scene": "일상"
+    },
+    "410": {
+      "phrase": "おやすみ",
+      "romaji": "oyasumi",
+      "korean": "오야스미",
+      "meaning": "잘 자 (캐주얼)",
+      "scene": "일상"
+    },
+    "411": {
+      "phrase": "おねがい",
+      "romaji": "onegai",
+      "korean": "오네가이",
+      "meaning": "부탁해 (캐주얼)",
+      "scene": "일상"
+    },
+    "412": {
+      "phrase": "みてください",
+      "romaji": "mite kudasai",
+      "korean": "미테쿠다사이",
+      "meaning": "보세요",
+      "scene": "일상"
+    },
+    "413": {
+      "phrase": "きいてください",
+      "romaji": "kiite kudasai",
+      "korean": "키이테쿠다사이",
+      "meaning": "들어주세요",
+      "scene": "일상"
+    },
+    "414": {
+      "phrase": "いっしょにたべませんか",
+      "romaji": "issho ni tabemasen ka",
+      "korean": "잇쇼니 타베마센카",
+      "meaning": "같이 먹지 않을래요?",
+      "scene": "일상"
+    },
+    "415": {
+      "phrase": "けっこうです",
+      "romaji": "kekkou desu",
+      "korean": "켓코데스",
+      "meaning": "괜찮습니다/됐습니다",
+      "scene": "일상"
+    },
+    "416": {
+      "phrase": "ちがいます",
+      "romaji": "chigaimasu",
+      "korean": "치가이마스",
+      "meaning": "아닙니다",
+      "scene": "일상"
+    },
+    "417": {
+      "phrase": "けんさをしてください",
+      "romaji": "kensa wo shite kudasai",
+      "korean": "켄사오 시테쿠다사이",
+      "meaning": "검사를 받아주세요",
+      "scene": "병원·약국"
+    },
+    "418": {
+      "phrase": "いたいところはどこですか",
+      "romaji": "itai tokoro wa doko desu ka",
+      "korean": "이타이 토코로와 도코데스카",
+      "meaning": "아픈 곳은 어디입니까?",
+      "scene": "병원·약국"
+    },
+    "419": {
+      "phrase": "いつからですか",
+      "romaji": "itsu kara desu ka",
+      "korean": "이츠카라데스카",
+      "meaning": "언제부터입니까?",
+      "scene": "병원·약국"
+    },
+    "420": {
+      "phrase": "きのうのよるからです",
+      "romaji": "kinou no yoru kara desu",
+      "korean": "키노노 요루카라데스",
+      "meaning": "어제 밤부터입니다",
+      "scene": "병원·약국"
+    },
+    "421": {
+      "phrase": "しんぱいしないでください",
+      "romaji": "shinpai shinaide kudasai",
+      "korean": "신파이 시나이데쿠다사이",
+      "meaning": "걱정하지 마세요",
+      "scene": "병원·약국"
+    },
+    "422": {
+      "phrase": "たいじゅうをはかってください",
+      "romaji": "taijuu wo hakatte kudasai",
+      "korean": "타이쥬오 하캇테쿠다사이",
+      "meaning": "체중을 재주세요",
+      "scene": "병원·약국"
+    },
+    "423": {
+      "phrase": "しんぞくにれんらくしてください",
+      "romaji": "shinzoku ni renraku shite kudasai",
+      "korean": "신조쿠니 렌라쿠 시테쿠다사이",
+      "meaning": "가족에게 연락해주세요",
+      "scene": "병원·약국"
+    },
+    "424": {
+      "phrase": "にゅういんがひつようですか",
+      "romaji": "nyuuin ga hitsuyou desu ka",
+      "korean": "뉴인이 히츠요데스카",
+      "meaning": "입원이 필요합니까?",
+      "scene": "병원·약국"
+    },
+    "425": {
+      "phrase": "びょういんのよやくをおねがいします",
+      "romaji": "byouin no yoyaku wo onegaishimasu",
+      "korean": "뵤인노 요야쿠오 오네가이시마스",
+      "meaning": "병원 예약을 부탁합니다",
+      "scene": "병원·약국"
+    },
+    "426": {
+      "phrase": "ちかてつはどこですか",
+      "romaji": "chikatetsu wa doko desu ka",
+      "korean": "치카테츠와 도코데스카",
+      "meaning": "지하철은 어디입니까?",
+      "scene": "여행·교통"
+    },
+    "427": {
+      "phrase": "じゅうきょをかえます",
+      "romaji": "juukyo wo kaemasu",
+      "korean": "쥬쿄오 카에마스",
+      "meaning": "주소를 바꿉니다",
+      "scene": "여행·교통"
+    },
+    "428": {
+      "phrase": "みちにまよいました",
+      "romaji": "michi ni mayoimashita",
+      "korean": "미치니 마요이마시타",
+      "meaning": "길을 잃었습니다",
+      "scene": "여행·교통"
+    },
+    "429": {
+      "phrase": "ちずをみせてください",
+      "romaji": "chizu wo misete kudasai",
+      "korean": "치즈오 미세테쿠다사이",
+      "meaning": "지도를 보여주세요",
+      "scene": "여행·교통"
+    },
+    "430": {
+      "phrase": "このちかくにホテルはありますか",
+      "romaji": "kono chikaku ni hoteru wa arimasu ka",
+      "korean": "코노 치카쿠니 호테루와 아리마스카",
+      "meaning": "이 근처에 호텔이 있습니까?",
+      "scene": "여행·교통"
+    },
+    "431": {
+      "phrase": "ひとりべやをおねがいします",
+      "romaji": "hitoribeya wo onegaishimasu",
+      "korean": "히토리베야오 오네가이시마스",
+      "meaning": "싱글 룸 부탁합니다",
+      "scene": "여행·교통"
+    },
+    "432": {
+      "phrase": "ふたりべやをおねがいします",
+      "romaji": "futaribeya wo onegaishimasu",
+      "korean": "후타리베야오 오네가이시마스",
+      "meaning": "트윈 룸 부탁합니다",
+      "scene": "여행·교통"
+    },
+    "433": {
+      "phrase": "おちゃをください",
+      "romaji": "Ocha o kudasai",
+      "korean": "오챠 오 쿠다사이",
+      "meaning": "차(녹차) 주세요",
+      "scene": "식당·가게"
+    },
+    "434": {
+      "phrase": "よやくをキャンセルしたいです",
+      "romaji": "yoyaku wo kyanseru shitai desu",
+      "korean": "요야쿠오 캰세루 시타이데스",
+      "meaning": "예약을 취소하고 싶습니다",
+      "scene": "여행·교통"
+    },
+    "435": {
+      "phrase": "ひこうきのじかんをおしえてください",
+      "romaji": "hikouki no jikan wo oshiete kudasai",
+      "korean": "히코키노 지칸오 오시에테쿠다사이",
+      "meaning": "비행기 시간을 알려주세요",
+      "scene": "여행·교통"
+    },
+    "436": {
+      "phrase": "しんかんせんにのりたいです",
+      "romaji": "shinkansen ni noritai desu",
+      "korean": "신칸센니 노리타이데스",
+      "meaning": "신칸센을 타고 싶습니다",
+      "scene": "여행·교통"
+    },
+    "437": {
+      "phrase": "じょうしゃけんをかいました",
+      "romaji": "joushaken wo kaimashita",
+      "korean": "조샤켄오 카이마시타",
+      "meaning": "승차권을 샀습니다",
+      "scene": "여행·교통"
+    },
+    "438": {
+      "phrase": "つうきんパスはありますか",
+      "romaji": "tsuukin pasu wa arimasu ka",
+      "korean": "츠킨 파스와 아리마스카",
+      "meaning": "통근 패스가 있습니까?",
+      "scene": "여행·교통"
+    },
+    "439": {
+      "phrase": "れつにならんでください",
+      "romaji": "retsu ni narande kudasai",
+      "korean": "레츠니 나란데쿠다사이",
+      "meaning": "줄에 서주세요",
+      "scene": "여행·교통"
+    },
+    "440": {
+      "phrase": "つぎはなんえきですか",
+      "romaji": "tsugi wa nan eki desu ka",
+      "korean": "츠기와 난 에키데스카",
+      "meaning": "다음은 무슨 역입니까?",
+      "scene": "여행·교통"
+    },
+    "441": {
+      "phrase": "とっきゅうはとまりますか",
+      "romaji": "tokkyuu wa tomarimasu ka",
+      "korean": "톳큐와 토마리마스카",
+      "meaning": "특급은 섭니까?",
+      "scene": "여행·교통"
+    },
+    "442": {
+      "phrase": "にもつをあずけたいです",
+      "romaji": "nimotsu wo azuketai desu",
+      "korean": "니모츠오 아즈케타이데스",
+      "meaning": "짐을 맡기고 싶습니다",
+      "scene": "여행·교통"
+    },
+    "443": {
+      "phrase": "コインロッカーはどこですか",
+      "romaji": "koin rokkaa wa doko desu ka",
+      "korean": "코인 록카와 도코데스카",
+      "meaning": "코인락커는 어디입니까?",
+      "scene": "여행·교통"
+    },
+    "444": {
+      "phrase": "ちかくにこんびにわありますか",
+      "romaji": "Chikaku ni konbini wa arimasu ka",
+      "korean": "치카쿠 니 콘비니 와 아리마스 카",
+      "meaning": "근처에 편의점이 있나요?",
+      "scene": "일상"
+    },
+    "445": {
+      "phrase": "えきまでどのくらいですか",
+      "romaji": "eki made dono kurai desu ka",
+      "korean": "에키마데 도노쿠라이데스카",
+      "meaning": "역까지 얼마나 걸립니까?",
+      "scene": "여행·교통"
+    },
+    "446": {
+      "phrase": "ぶんかつばらいでいきます",
+      "romaji": "bunkatsu barai de ikimasu",
+      "korean": "분카츠바라이데 이키마스",
+      "meaning": "분할 지불로 갑니다",
+      "scene": "여행·교통"
+    },
+    "447": {
+      "phrase": "しゅっぱつはなんじですか",
+      "romaji": "shuppatsu wa nanji desu ka",
+      "korean": "슙파츠와 난지데스카",
+      "meaning": "출발은 몇 시입니까?",
+      "scene": "여행·교통"
+    },
+    "448": {
+      "phrase": "ちゃくちはなんじですか",
+      "romaji": "chakuchi wa nanji desu ka",
+      "korean": "차쿠치와 난지데스카",
+      "meaning": "도착은 몇 시입니까?",
+      "scene": "여행·교통"
+    },
+    "449": {
+      "phrase": "おくらせないでください",
+      "romaji": "okurasenaide kudasai",
+      "korean": "오쿠라세나이데쿠다사이",
+      "meaning": "늦지 않게 해주세요",
+      "scene": "여행·교통"
+    },
+    "450": {
+      "phrase": "ふたりです",
+      "romaji": "futari desu",
+      "korean": "후타리데스",
+      "meaning": "두 명입니다",
+      "scene": "식당·가게"
+    },
+    "451": {
+      "phrase": "テーブルせきをおねがいします",
+      "romaji": "teeburu seki wo onegaishimasu",
+      "korean": "테부루 세키오 오네가이시마스",
+      "meaning": "테이블 자리 부탁합니다",
+      "scene": "식당·가게"
+    },
+    "452": {
+      "phrase": "カウンターせきがいいです",
+      "romaji": "kauntaa seki ga ii desu",
+      "korean": "카운타 세키가 이데스",
+      "meaning": "카운터 자리가 좋습니다",
+      "scene": "식당·가게"
+    },
+    "453": {
+      "phrase": "きょうのランチはなんですか",
+      "romaji": "kyou no ranchi wa nan desu ka",
+      "korean": "쿄노 란치와 난데스카",
+      "meaning": "오늘의 런치는 무엇입니까?",
+      "scene": "식당·가게"
+    },
+    "454": {
+      "phrase": "ていしょくをください",
+      "romaji": "teishoku wo kudasai",
+      "korean": "테이쇼쿠오 쿠다사이",
+      "meaning": "정식 주세요",
+      "scene": "식당·가게"
+    },
+    "455": {
+      "phrase": "おおめにください",
+      "romaji": "oomeni kudasai",
+      "korean": "오오메니 쿠다사이",
+      "meaning": "많이 주세요",
+      "scene": "식당·가게"
+    },
+    "456": {
+      "phrase": "すこしだけください",
+      "romaji": "sukoshi dake kudasai",
+      "korean": "스코시다케 쿠다사이",
+      "meaning": "조금만 주세요",
+      "scene": "식당·가게"
+    },
+    "457": {
+      "phrase": "からくしないでください",
+      "romaji": "karaku shinaide kudasai",
+      "korean": "카라쿠 시나이데쿠다사이",
+      "meaning": "맵지 않게 해주세요",
+      "scene": "식당·가게"
+    },
+    "458": {
+      "phrase": "にんにくをぬいてください",
+      "romaji": "ninniku wo nuite kudasai",
+      "korean": "닌니쿠오 누이테쿠다사이",
+      "meaning": "마늘 빼주세요",
+      "scene": "식당·가게"
+    },
+    "459": {
+      "phrase": "ベジタリアンです",
+      "romaji": "bejitarian desu",
+      "korean": "베지타리안데스",
+      "meaning": "채식주의자입니다",
+      "scene": "식당·가게"
+    },
+    "460": {
+      "phrase": "アレルギーがあるので",
+      "romaji": "arerugii ga aru node",
+      "korean": "아레루기가 아루노데",
+      "meaning": "알레르기가 있어서",
+      "scene": "식당·가게"
+    },
+    "461": {
+      "phrase": "おいそぎですか",
+      "romaji": "oisogi desu ka",
+      "korean": "오이소기데스카",
+      "meaning": "급하십니까?",
+      "scene": "식당·가게"
+    },
+    "462": {
+      "phrase": "もちかえりですか",
+      "romaji": "mochikaeri desu ka",
+      "korean": "모치카에리데스카",
+      "meaning": "포장이십니까?",
+      "scene": "식당·가게"
+    },
+    "463": {
+      "phrase": "ここでたべます",
+      "romaji": "koko de tabemasu",
+      "korean": "코코데 타베마스",
+      "meaning": "여기서 먹습니다",
+      "scene": "식당·가게"
+    },
+    "464": {
+      "phrase": "さしみをください",
+      "romaji": "sashimi wo kudasai",
+      "korean": "사시미오 쿠다사이",
+      "meaning": "회 주세요",
+      "scene": "식당·가게"
+    },
+    "465": {
+      "phrase": "みそしるをください",
+      "romaji": "misoshiru wo kudasai",
+      "korean": "미소시루오 쿠다사이",
+      "meaning": "미소된장국 주세요",
+      "scene": "식당·가게"
+    },
+    "466": {
+      "phrase": "てんぷらをください",
+      "romaji": "tenpura wo kudasai",
+      "korean": "텐푸라오 쿠다사이",
+      "meaning": "튀김 주세요",
+      "scene": "식당·가게"
+    },
+    "467": {
+      "phrase": "やきとりをください",
+      "romaji": "yakitori wo kudasai",
+      "korean": "야키토리오 쿠다사이",
+      "meaning": "꼬치 구이 주세요",
+      "scene": "식당·가게"
+    },
+    "468": {
+      "phrase": "おにぎりをふたつください",
+      "romaji": "onigiri wo futatsu kudasai",
+      "korean": "오니기리오 후타츠 쿠다사이",
+      "meaning": "주먹밥 두 개 주세요",
+      "scene": "식당·가게"
+    },
+    "469": {
+      "phrase": "おちゃわんください",
+      "romaji": "ochawan kudasai",
+      "korean": "오차완 쿠다사이",
+      "meaning": "밥 한 그릇 주세요",
+      "scene": "식당·가게"
+    },
+    "470": {
+      "phrase": "おかわりください",
+      "romaji": "okawari kudasai",
+      "korean": "오카와리 쿠다사이",
+      "meaning": "한 그릇 더 주세요",
+      "scene": "식당·가게"
+    },
+    "471": {
+      "phrase": "ストローをください",
+      "romaji": "sutoroo wo kudasai",
+      "korean": "스토로오 쿠다사이",
+      "meaning": "빨대 주세요",
+      "scene": "식당·가게"
+    },
+    "472": {
+      "phrase": "いちばんはやいじかんのきっぷをください",
+      "romaji": "Ichiban hayai jikan no kippu o kudasai",
+      "korean": "이치반 하야이 지칸 노 키쁘 오 쿠다사이",
+      "meaning": "가장 빠른 시간의 티켓을 주세요",
+      "scene": "여행·교통"
+    },
+    "473": {
+      "phrase": "きっぷはうりきれですか",
+      "romaji": "Kippu wa urikire desu ka",
+      "korean": "키쁘 와 우리키레 데스 카",
+      "meaning": "표가 매진인가요?",
+      "scene": "여행·교통"
+    },
+    "474": {
+      "phrase": "あきばれですか",
+      "romaji": "akibare desu ka",
+      "korean": "아키바레데스카",
+      "meaning": "현금만 받습니까?",
+      "scene": "식당·가게"
+    },
+    "475": {
+      "phrase": "ポイントカードはありますか",
+      "romaji": "pointo kaado wa arimasu ka",
+      "korean": "포인토 카도와 아리마스카",
+      "meaning": "포인트 카드가 있습니까?",
+      "scene": "식당·가게"
+    },
+    "476": {
+      "phrase": "しちじにしめきりです",
+      "romaji": "shichiji ni shimekiri desu",
+      "korean": "시치지니 시메키리데스",
+      "meaning": "7시에 주문 마감입니다",
+      "scene": "식당·가게"
+    },
+    "477": {
+      "phrase": "いちばんにんきはなんですか",
+      "romaji": "ichiban ninki wa nan desu ka",
+      "korean": "이치반 닌키와 난데스카",
+      "meaning": "가장 인기 있는 것은 무엇입니까?",
+      "scene": "식당·가게"
+    },
+    "478": {
+      "phrase": "いちばんやすいものはなんですか",
+      "romaji": "Ichiban yasui mono wa nan desu ka",
+      "korean": "이치반 야스이 모노 와 난 데스 카",
+      "meaning": "제일 저렴한 것은 무엇입니까?",
+      "scene": "식당·가게"
+    },
+    "479": {
+      "phrase": "てんいんをよんでください",
+      "romaji": "tenin wo yonde kudasai",
+      "korean": "텐인오 욘데쿠다사이",
+      "meaning": "점원을 불러주세요",
+      "scene": "식당·가게"
+    },
+    "480": {
+      "phrase": "おいしそうですね",
+      "romaji": "oishisou desu ne",
+      "korean": "오이시소데스네",
+      "meaning": "맛있어 보이네요",
+      "scene": "식당·가게"
+    },
+    "481": {
+      "phrase": "わりびききっぷはありますか",
+      "romaji": "Waribiki kippu wa arimasu ka",
+      "korean": "와리비키 키쁘 와 아리마스 카",
+      "meaning": "할인 티켓은 있나요?",
+      "scene": "여행·교통"
+    },
+    "482": {
+      "phrase": "やすいれすとらんをさがしています",
+      "romaji": "yasui resutoran wo sagashite imasu",
+      "korean": "야스이 레스토랑오 사가시테이마스",
+      "meaning": "저렴한 레스토랑을 찾고 있습니다",
+      "scene": "식당·가게"
+    },
+    "483": {
+      "phrase": "かいものかごをください",
+      "romaji": "kaimono kago wo kudasai",
+      "korean": "카이모노 카고오 쿠다사이",
+      "meaning": "쇼핑 바구니 주세요",
+      "scene": "식당·가게"
+    },
+    "484": {
+      "phrase": "てんぷらそばをください",
+      "romaji": "tenpura soba wo kudasai",
+      "korean": "텐푸라 소바오 쿠다사이",
+      "meaning": "튀김 소바 주세요",
+      "scene": "식당·가게"
+    },
+    "485": {
+      "phrase": "うどんをください",
+      "romaji": "udon wo kudasai",
+      "korean": "우돈오 쿠다사이",
+      "meaning": "우동 주세요",
+      "scene": "식당·가게"
+    },
+    "486": {
+      "phrase": "そばとうどんどちらがいいですか",
+      "romaji": "soba to udon dochira ga ii desu ka",
+      "korean": "소바토 우돈 도치라가 이데스카",
+      "meaning": "소바와 우동 중 어느 쪽이 좋습니까?",
+      "scene": "식당·가게"
+    },
+    "487": {
+      "phrase": "にぎりをください",
+      "romaji": "nigiri wo kudasai",
+      "korean": "니기리오 쿠다사이",
+      "meaning": "초밥 주세요",
+      "scene": "식당·가게"
+    },
+    "488": {
+      "phrase": "てんぷらうどんをください",
+      "romaji": "tenpura udon wo kudasai",
+      "korean": "텐푸라 우돈오 쿠다사이",
+      "meaning": "튀김 우동 주세요",
+      "scene": "식당·가게"
+    },
+    "489": {
+      "phrase": "あねがいます",
+      "romaji": "ane ga imasu",
+      "korean": "아네가 이마스",
+      "meaning": "언니가 있습니다",
+      "scene": "일상"
+    },
+    "490": {
+      "phrase": "おとうとがいます",
+      "romaji": "otouto ga imasu",
+      "korean": "오토토가 이마스",
+      "meaning": "남동생이 있습니다",
+      "scene": "일상"
+    },
+    "491": {
+      "phrase": "ペットをかっています",
+      "romaji": "petto wo katte imasu",
+      "korean": "펫토오 캇테이마스",
+      "meaning": "애완동물을 키우고 있습니다",
+      "scene": "일상"
+    },
+    "492": {
+      "phrase": "でんきをけしてください",
+      "romaji": "denki wo keshite kudasai",
+      "korean": "덴키오 케시테쿠다사이",
+      "meaning": "불을 꺼주세요",
+      "scene": "일상"
+    },
+    "493": {
+      "phrase": "エアコンをつけてください",
+      "romaji": "eakon wo tsukete kudasai",
+      "korean": "에아콘오 츠케테쿠다사이",
+      "meaning": "에어컨을 켜주세요",
+      "scene": "일상"
+    },
+    "494": {
+      "phrase": "しゅっちょうちゅうです",
+      "romaji": "shucchou chuu desu",
+      "korean": "슙쵸 츄데스",
+      "meaning": "출장 중입니다",
+      "scene": "일상"
+    },
+    "495": {
+      "phrase": "やすみのよていはありますか",
+      "romaji": "yasumi no yotei wa arimasu ka",
+      "korean": "야스미노 요테이와 아리마스카",
+      "meaning": "휴일 예정이 있습니까?",
+      "scene": "일상"
+    },
+    "496": {
+      "phrase": "ねつがあるのでやすみます",
+      "romaji": "netsu ga aru node yasumimasu",
+      "korean": "네츠가 아루노데 야스미마스",
+      "meaning": "열이 있어서 쉽니다",
+      "scene": "병원·약국"
+    },
+    "497": {
+      "phrase": "くすりをもらいにいきました",
+      "romaji": "kusuri wo morai ni ikimashita",
+      "korean": "쿠스리오 모라이니 이키마시타",
+      "meaning": "약을 받으러 갔습니다",
+      "scene": "병원·약국"
+    },
+    "498": {
+      "phrase": "びょういんにいってきます",
+      "romaji": "byouin ni itte kimasu",
+      "korean": "뵤인니 잇테키마스",
+      "meaning": "병원에 다녀오겠습니다",
+      "scene": "병원·약국"
+    },
+    "499": {
+      "phrase": "りょうがえはどこですか",
+      "romaji": "Ryōgae wa doko desu ka",
+      "korean": "료가에 와 도코 데스 카",
+      "meaning": "환전소는 어디인가요?",
+      "scene": "여행·교통"
+    },
+    "500": {
+      "phrase": "きつえんじょはどこですか",
+      "romaji": "Kitsuenjo wa doko desu ka",
+      "korean": "키츠엔조 와 도코 데스 카",
+      "meaning": "흡연실은 어디인가요?",
+      "scene": "일상"
+    }
+  }
+}

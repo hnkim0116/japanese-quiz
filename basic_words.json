@@ -1,0 +1,260 @@
+{
+	"gojuon" : {
+		"hiragana" :  [
+    [
+      {"kana": "あ", "kr": "아", "roma": "a"},
+      {"kana": "い", "kr": "이", "roma": "i"},
+      {"kana": "う", "kr": "우", "roma": "u"},
+      {"kana": "え", "kr": "에", "roma": "e"},
+      {"kana": "お", "kr": "오", "roma": "o"}
+    ],
+    [
+      {"kana": "か", "kr": "카", "roma": "ka"},
+      {"kana": "き", "kr": "키", "roma": "ki"},
+      {"kana": "く", "kr": "쿠", "roma": "ku"},
+      {"kana": "け", "kr": "케", "roma": "ke"},
+      {"kana": "こ", "kr": "코", "roma": "ko"}
+    ],
+    [
+      {"kana": "さ", "kr": "사", "roma": "sa"},
+      {"kana": "し", "kr": "시", "roma": "shi"},
+      {"kana": "す", "kr": "스", "roma": "su"},
+      {"kana": "せ", "kr": "세", "roma": "se"},
+      {"kana": "そ", "kr": "소", "roma": "so"}
+    ],
+    [
+      {"kana": "た", "kr": "타", "roma": "ta"},
+      {"kana": "ち", "kr": "치", "roma": "chi"},
+      {"kana": "つ", "kr": "츠", "roma": "tsu"},
+      {"kana": "て", "kr": "테", "roma": "te"},
+      {"kana": "と", "kr": "토", "roma": "to"}
+    ],
+    [
+      {"kana": "な", "kr": "나", "roma": "na"},
+      {"kana": "に", "kr": "니", "roma": "ni"},
+      {"kana": "ぬ", "kr": "누", "roma": "nu"},
+      {"kana": "ね", "kr": "네", "roma": "ne"},
+      {"kana": "の", "kr": "노", "roma": "no"}
+    ],
+    [
+      {"kana": "は", "kr": "하", "roma": "ha"},
+      {"kana": "ひ", "kr": "히", "roma": "hi"},
+      {"kana": "ふ", "kr": "후", "roma": "fu"},
+      {"kana": "へ", "kr": "헤", "roma": "he"},
+      {"kana": "ほ", "kr": "호", "roma": "ho"}
+    ],
+    [
+      {"kana": "ま", "kr": "마", "roma": "ma"},
+      {"kana": "み", "kr": "미", "roma": "mi"},
+      {"kana": "む", "kr": "무", "roma": "mu"},
+      {"kana": "め", "kr": "메", "roma": "me"},
+      {"kana": "も", "kr": "모", "roma": "mo"}
+    ],
+    [
+      {"kana": "や", "kr": "야", "roma": "ya"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "ゆ", "kr": "유", "roma": "yu"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "よ", "kr": "요", "roma": "yo"}
+    ],
+    [
+      {"kana": "ら", "kr": "라", "roma": "ra"},
+      {"kana": "り", "kr": "리", "roma": "ri"},
+      {"kana": "る", "kr": "루", "roma": "ru"},
+      {"kana": "れ", "kr": "레", "roma": "re"},
+      {"kana": "ろ", "kr": "로", "roma": "ro"}
+    ],
+    [
+      {"kana": "わ", "kr": "와", "roma": "wa"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "を", "kr": "오", "roma": "wo"}
+    ],
+    [
+      {"kana": "ん", "kr": "응", "roma": "n"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""}
+    ]
+  ],
+		"katakana" :  [
+    [
+      {"kana": "ア", "kr": "아", "roma": "a"},
+      {"kana": "イ", "kr": "이", "roma": "i"},
+      {"kana": "ウ", "kr": "우", "roma": "u"},
+      {"kana": "エ", "kr": "에", "roma": "e"},
+      {"kana": "オ", "kr": "오", "roma": "o"}
+    ],
+    [
+      {"kana": "カ", "kr": "카", "roma": "ka"},
+      {"kana": "キ", "kr": "키", "roma": "ki"},
+      {"kana": "ク", "kr": "쿠", "roma": "ku"},
+      {"kana": "ケ", "kr": "케", "roma": "ke"},
+      {"kana": "コ", "kr": "코", "roma": "ko"}
+    ],
+    [
+      {"kana": "サ", "kr": "사", "roma": "sa"},
+      {"kana": "シ", "kr": "시", "roma": "shi"},
+      {"kana": "ス", "kr": "스", "roma": "su"},
+      {"kana": "セ", "kr": "세", "roma": "se"},
+      {"kana": "ソ", "kr": "소", "roma": "so"}
+    ],
+    [
+      {"kana": "タ", "kr": "타", "roma": "ta"},
+      {"kana": "チ", "kr": "치", "roma": "chi"},
+      {"kana": "ツ", "kr": "츠", "roma": "tsu"},
+      {"kana": "テ", "kr": "테", "roma": "te"},
+      {"kana": "ト", "kr": "토", "roma": "to"}
+    ],
+    [
+      {"kana": "ナ", "kr": "나", "roma": "na"},
+      {"kana": "ニ", "kr": "니", "roma": "ni"},
+      {"kana": "ヌ", "kr": "누", "roma": "nu"},
+      {"kana": "ネ", "kr": "네", "roma": "ne"},
+      {"kana": "ノ", "kr": "노", "roma": "no"}
+    ],
+    [
+      {"kana": "ハ", "kr": "하", "roma": "ha"},
+      {"kana": "ヒ", "kr": "히", "roma": "hi"},
+      {"kana": "フ", "kr": "후", "roma": "fu"},
+      {"kana": "ヘ", "kr": "헤", "roma": "he"},
+      {"kana": "ホ", "kr": "호", "roma": "ho"}
+    ],
+    [
+      {"kana": "マ", "kr": "마", "roma": "ma"},
+      {"kana": "ミ", "kr": "미", "roma": "mi"},
+      {"kana": "ム", "kr": "무", "roma": "mu"},
+      {"kana": "メ", "kr": "메", "roma": "me"},
+      {"kana": "モ", "kr": "모", "roma": "mo"}
+    ],
+    [
+      {"kana": "ヤ", "kr": "야", "roma": "ya"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "ユ", "kr": "유", "roma": "yu"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "ヨ", "kr": "요", "roma": "yo"}
+    ],
+    [
+      {"kana": "ラ", "kr": "라", "roma": "ra"},
+      {"kana": "リ", "kr": "리", "roma": "ri"},
+      {"kana": "ル", "kr": "루", "roma": "ru"},
+      {"kana": "レ", "kr": "레", "roma": "re"},
+      {"kana": "ロ", "kr": "로", "roma": "ro"}
+    ],
+    [
+      {"kana": "ワ", "kr": "와", "roma": "wa"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "ヲ", "kr": "오", "roma": "wo"}
+    ],
+    [
+      {"kana": "ン", "kr": "응", "roma": "n"},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""},
+      {"kana": "", "kr": "", "roma": ""}
+    ]
+  ]
+	},
+	"numbers" : {
+		"number":  [
+      [
+        {"kana": "いち", "kr": "이치", "roma": "ichi", "meaning": "하나"},
+        {"kana": "に", "kr": "니", "roma": "ni", "meaning": "둘"},
+        {"kana": "さん", "kr": "산", "roma": "san", "meaning": "셋"},
+        {"kana": "よん/し", "kr": "욘/시", "roma": "yon/shi", "meaning": "넷"},
+        {"kana": "ご", "kr": "고", "roma": "go", "meaning": "다섯"}
+      ],
+      [
+        {"kana": "ろく", "kr": "로쿠", "roma": "roku", "meaning": "여섯"},
+        {"kana": "なな/しち", "kr": "나나/시치", "roma": "nana/shichi", "meaning": "일곱"},
+        {"kana": "はち", "kr": "하치", "roma": "hachi", "meaning": "여덟"},
+        {"kana": "きゅう/く", "kr": "큐/쿠", "roma": "kyū/ku", "meaning": "아홉"},
+        {"kana": "じゅう", "kr": "쥬", "roma": "jū", "meaning": "열"}
+      ],
+      [
+        {"kana": "じゅういち", "kr": "쥬이치", "roma": "jū-ichi", "meaning": "열하나"},
+        {"kana": "にじゅう", "kr": "니쥬", "roma": "nijū", "meaning": "스물"},
+        {"kana": "ごじゅう", "kr": "고쥬", "roma": "go-jū", "meaning": "쉰"},
+        {"kana": "ひゃく", "kr": "햐쿠", "roma": "hyaku", "meaning": "백"},
+        {"kana": "せん", "kr": "센", "roma": "sen", "meaning": "천"}
+      ],
+      [
+        {"kana": "まん", "kr": "만", "roma": "man", "meaning": "만"},
+        {"kana": "じゅうまん", "kr": "쥬우만", "roma": "jū-man", "meaning": "십만"},
+        {"kana": "ひゃくまん", "kr": "햐쿠만", "roma": "hyaku-man", "meaning": "백만"},
+        {"kana": "せんまん", "kr": "센만", "roma": "sen-man", "meaning": "천만"},
+        {"kana": "おく", "kr": "오쿠", "roma": "oku", "meaning": "억"}
+      ]
+  ],
+    "day" : [
+      [
+        {"kana": "ねん", "kr": "넨", "roma": "nen", "meaning": "년"},
+        {"kana": "がつ", "kr": "가츠", "roma": "gatsu", "meaning": "월"},
+        {"kana": "にち/ひ", "kr": "닛치/히", "roma": "nichi/hi", "meaning": "일"},
+        {"kana": "じ", "kr": "지", "roma": "ji", "meaning": "시"},
+        {"kana": "ふん/ぷん", "kr": "분/쁜", "roma": "fun/pun", "meaning": "분"}
+      ],
+      [
+        {"kana": "びょう", "kr": "뵤", "roma": "byō", "meaning": "초"},
+        {"kana": "あさ", "kr": "아사", "roma": "asa", "meaning": "아침"},
+        {"kana": "ひる", "kr": "히루", "roma": "hiru", "meaning": "점심"},
+        {"kana": "ごご", "kr": "고고", "roma": "gogo", "meaning": "오후"},
+        {"kana": "ばん", "kr": "반", "roma": "ban", "meaning": "저녁"}
+      ],
+      [
+        {"kana": "あけがた", "kr": "아케가타", "roma": "akegata", "meaning": "새벽"},
+        {"kana": "げつようび", "kr": "게쓰요비", "roma": "getsuyōbi", "meaning": "월요일"},
+        {"kana": "かようび", "kr": "카요비", "roma": "kayōbi", "meaning": "화요일"},
+        {"kana": "すいようび", "kr": "스이요비", "roma": "suiyōbi", "meaning": "수요일"},
+        {"kana": "もくようび", "kr": "목요비", "roma": "mokuyōbi", "meaning": "목요일"}
+      ],
+      [
+        {"kana": "きんようび", "kr": "킨요비", "roma": "kin'yōbi", "meaning": "금요일"},
+        {"kana": "どようび", "kr": "도요비", "roma": "doyōbi", "meaning": "토요일"},
+        {"kana": "にちようび", "kr": "니치요비", "roma": "nichiyōbi", "meaning": "일요일"},
+        {"kana": "こんしゅう", "kr": "콘슈", "roma": "konshū", "meaning": "이번 주"},
+        {"kana": "らいしゅう", "kr": "라이슈", "roma": "raishū", "meaning": "다음 주"}
+      ],
+      [
+        {"kana": "せんしゅう", "kr": "센슈", "roma": "senshū", "meaning": "지난 주"},
+        {"kana": "こんしゅうまつ", "kr": "콘슈마쓰", "roma": "konshūmatsu", "meaning": "이번 주말"},
+        {"kana": "らいしゅうまつ", "kr": "라이슈마쓰", "roma": "raishūmatsu", "meaning": "다음 주말"},
+        {"kana": "せんしゅうまつ", "kr": "센슈마쓰", "roma": "senshūmatsu", "meaning": "지난 주말"},
+        {"kana": "こんげつ", "kr": "콘게쓰", "roma": "kongetsu", "meaning": "이번 달"},
+        {"kana": "らいげつ", "kr": "라이게쓰", "roma": "raigetsu", "meaning": "다음 달"}
+      ],
+      [
+        {"kana": "せんげつ", "kr": "센게쓰", "roma": "sengetsu", "meaning": "지난달"},
+        {"kana": "きょう", "kr": "쿄", "roma": "kyō", "meaning": "오늘"},
+        {"kana": "あした", "kr": "아시타", "roma": "ashita", "meaning": "내일"},
+        {"kana": "きのう", "kr": "키노오", "roma": "kinō", "meaning": "어제"},
+        {"kana": "おととい", "kr": "오또또이", "roma": "ototoi", "meaning": "그제"}
+      ],
+      [
+        {"kana": "あさって", "kr": "아삿테", "roma": "asatte", "meaning": "모레"},
+        {"kana": "ことし", "kr": "코토시", "roma": "kotoshi", "meaning": "올해"},
+        {"kana": "らいねん", "kr": "라이넨", "roma": "rainen", "meaning": "내년"},
+        {"kana": "きょねん", "kr": "쿄넨", "roma": "kyonen", "meaning": "작년"},
+        {"kana": "まいにち", "kr": "마이니치", "roma": "mainichi", "meaning": "매일"}
+      ],
+      [
+        {"kana": "まいふん", "kr": "마이분", "roma": "maibun", "meaning": "매분"},
+        {"kana": "まいじ", "kr": "마이지", "roma": "maiji", "meaning": "매시간"},
+        {"kana": "まいしゅう", "kr": "마이슈", "roma": "maishū", "meaning": "매주"},
+        {"kana": "まいげつ/まいつき", "kr": "마이게츠/마이츠키", "roma": "maigetsu/maitsuki", "meaning": "매달"},
+        {"kana": "まいとし/まいねん", "kr": "마이토시/마이넨", "roma": "maitoshi/mainen", "meaning": "매년"}
+      ],
+      [
+        {"kana": "はる", "kr": "하루", "roma": "haru", "meaning": "봄"},
+        {"kana": "なつ", "kr": "나츠", "roma": "natsu", "meaning": "여름"},
+        {"kana": "あき", "kr": "아키", "roma": "aki", "meaning": "가을"},
+        {"kana": "ふゆ", "kr": "후유", "roma": "fuyu", "meaning": "겨울"},
+        {"kana": "", "kr": "", "roma": "", "meaning": ""}
+      ]
+    ]
+	}
+}
